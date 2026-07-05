@@ -1,0 +1,29 @@
+# EnergyDesk Australia — robots.txt
+
+# All standard crawlers welcome
+User-agent: *
+Allow: /
+
+# AI / GEO crawlers explicitly welcomed (for citation in AI answers)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://energydesk.com.au/sitemap.xml

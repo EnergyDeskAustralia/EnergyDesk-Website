@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+<!-- Primary SEO -->
+<title>Free Energy & Carbon Calculators Australia | Fuel, Solar, Emissions | EnergyDesk</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20120%20120%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20rx%3D%2224%22%20fill%3D%22%230A2440%22/%3E%3Crect%20x%3D%2224%22%20y%3D%2248%22%20width%3D%2212%22%20height%3D%2237%22%20rx%3D%222.5%22%20fill%3D%22%232E6DA4%22/%3E%3Crect%20x%3D%2239%22%20y%3D%2224%22%20width%3D%2212%22%20height%3D%2261%22%20rx%3D%222.5%22%20fill%3D%22%2334C77B%22/%3E%3Crect%20x%3D%2254%22%20y%3D%2238%22%20width%3D%2212%22%20height%3D%2247%22%20rx%3D%222.5%22%20fill%3D%22%233B9EFF%22/%3E%3Crect%20x%3D%2269%22%20y%3D%2260%22%20width%3D%2212%22%20height%3D%2225%22%20rx%3D%222.5%22%20fill%3D%22%232E6DA4%22/%3E%3Crect%20x%3D%2284%22%20y%3D%2244%22%20width%3D%2212%22%20height%3D%2241%22%20rx%3D%222.5%22%20fill%3D%22%233B9EFF%22/%3E%3Crect%20x%3D%2218%22%20y%3D%2288%22%20width%3D%2284%22%20height%3D%227%22%20rx%3D%223.5%22%20fill%3D%22%233B9EFF%22/%3E%3C/svg%3E">
+<meta name="description" content="Free Australian energy tools, compare fuel costs and carbon, convert energy units, calculate emissions, steam, solar offset and payback. Uses current NGA factors.">
+<meta name="keywords" content="energy calculator Australia, carbon calculator, fuel cost comparison, energy unit converter, solar payback calculator, steam boiler calculator, emissions calculator, NGA factors">
+<meta name="author" content="EnergyDesk Australia">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://energydesk.com.au/tools">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EnergyDesk Australia">
+<meta property="og:title" content="Free Energy & Carbon Calculators Australia | Fuel, Solar, Emissions | EnergyDesk">
+<meta property="og:description" content="Free Australian energy tools, compare fuel costs and carbon, convert energy units, calculate emissions, steam, solar offset and payback. Uses current NGA factors.">
+<meta property="og:url" content="https://energydesk.com.au/tools">
+<meta property="og:locale" content="en_AU">
+<meta property="og:image" content="https://energydesk.com.au/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="EnergyDesk Australia">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Energy & Carbon Calculators Australia | Fuel, Solar, Emissions | EnergyDesk">
+<meta name="twitter:description" content="Free Australian energy tools, compare fuel costs and carbon, convert energy units, calculate emissions, steam, solar offset and payback. Uses current NGA factors.">
+<meta name="twitter:image" content="https://energydesk.com.au/og-image.png">
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "EnergyDesk Energy & Carbon Calculators",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web browser",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD" },
+  "description": "A free suite of energy and carbon calculators for Australian businesses, fuel cost and carbon comparison, unit conversion, emissions, steam, solar offset and payback.",
+  "creator": { "@type": "Organization", "name": "EnergyDesk Australia", "url": "https://energydesk.com.au/" },
+  "inLanguage": "en-AU"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root { color-scheme: light only; }
+  html { background: #ffffff; }
+  :root {
+    --navy:#0A2440; --blue:#2E6DA4; --sky:#3B9EFF; --green:#34C77B; --amber:#F59E42; --purple:#9B6DD4;
+    --light:#F4F7FB; --mid:#E2E8F2; --text:#1A2A3A; --muted:#6A7A8A; --white:#ffffff;
+  }
+  body { font-family:'IBM Plex Sans',sans-serif; color:var(--text); background:var(--white); line-height:1.6; }
+  section { background: var(--white); }
+
+  /* NAV */
+  nav { background:var(--navy); position:sticky; top:0; z-index:100; }
+  .nav-top { padding:0 48px; height:70px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #0F2A44; }
+  .nav-logo { display:flex; align-items:center; gap:12px; }
+  .nav-badge { width:50px; height:50px; border-radius:10px; background:var(--navy); border:1.5px solid #1E3A5F; overflow:hidden; }
+  .nav-badge-bars { display:flex; align-items:flex-end; gap:2px; height:14px; }
+  .nav-bar { width:3.5px; border-radius:1px 1px 0 0; }
+  .nav-badge-nrg { font-family:'IBM Plex Mono',monospace; font-size:8.5px; font-weight:500; color:#fff; letter-spacing:0.1em; line-height:1; }
+  .nav-badge-desk { font-family:'IBM Plex Mono',monospace; font-size:6.5px; font-weight:400; color:var(--sky); letter-spacing:0.14em; line-height:1; }
+  .nav-wordmark { display:inline-flex; flex-direction:column; line-height:1; }
+  .nav-wordmark .wm-name { font-size:30px; font-weight:600; color:#fff; letter-spacing:-0.01em; }
+  .nav-wordmark .wm-name span { font-weight:300; color:var(--sky); }
+  .nav-wordmark .wm-au { font-size:12px; font-weight:400; letter-spacing:0.34em; text-transform:uppercase; color:#3A5A7A; margin-top:4px; margin-left:0.17em; }
+  .nav-ticker { display:flex; align-items:center; gap:20px; }
+  .ticker-label { font-family:'IBM Plex Mono',monospace; font-size:8.5px; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:#2E4A6A; margin-right:4px; }
+  .ticker-item { display:flex; align-items:center; gap:5px; }
+  .ticker-state { font-family:'IBM Plex Mono',monospace; font-size:9px; font-weight:500; color:#4A6A8A; letter-spacing:0.1em; }
+  .ticker-price { font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.04em; }
+  .ticker-price.up{color:var(--amber);} .ticker-price.down{color:var(--green);} .ticker-price.mid{color:#8AABCC;}
+  .ticker-arrow{font-size:8px;} .ticker-arrow.up{color:var(--amber);} .ticker-arrow.down{color:var(--green);}
+  .ticker-divider { width:1px; height:12px; background:#0F2A44; }
+  .ticker-updated { font-family:'IBM Plex Mono',monospace; font-size:8px; color:#2A4060; letter-spacing:0.08em; }
+  .nav-bottom { padding:0 48px; height:48px; display:flex; align-items:center; justify-content:space-between; }
+  .nav-links { display:flex; gap:0; list-style:none; height:100%; }
+  .nav-links li { height:100%; display:flex; align-items:center; }
+  .nav-links a { font-size:12.5px; font-weight:500; color:#6A8AAA; text-decoration:none; letter-spacing:0.04em; padding:0 18px; height:100%; display:flex; align-items:center; border-bottom:2px solid transparent; transition:color 0.2s,border-color 0.2s; }
+  .nav-links a:hover { color:#fff; border-bottom-color:var(--sky); }
+  .nav-links a.active { color:#fff; border-bottom-color:var(--sky); }
+  .nav-cta { background:var(--sky); color:#fff !important; padding:7px 16px !important; border-radius:6px; font-weight:600 !important; height:auto !important; border-bottom:none !important; font-size:12px !important; display:flex !important; flex-direction:column; align-items:center; line-height:1.1; text-align:center; }
+  .cta-small { font-size:12px; font-weight:600; letter-spacing:0.02em; }
+
+  /* PAGE HEADER */
+  .page-head { background:var(--navy); padding:56px 48px 40px; }
+  .page-head-eyebrow { font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--green); margin-bottom:14px; }
+  .page-head-title { font-size:38px; font-weight:700; color:#fff; letter-spacing:-0.02em; line-height:1.1; margin-bottom:16px; }
+  .page-head-title span { font-weight:300; color:var(--sky); }
+  .page-head-sub { font-size:15px; font-weight:300; color:#8AABCC; line-height:1.7; max-width:620px; }
+
+  /* TOOL PICKER GRID */
+  .tool-picker-section { background:var(--light); padding:40px 48px 8px; }
+  .tool-picker-label { font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); margin-bottom:18px; }
+  .tool-picker { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .picker-card {
+    background:#fff; border:1.5px solid var(--mid); border-radius:12px; padding:20px;
+    cursor:pointer; transition:all 0.18s; text-align:left; position:relative; overflow:hidden;
+    display:flex; flex-direction:column; gap:0; font-family:inherit;
+  }
+  .picker-card:hover { border-color:var(--sky); box-shadow:0 6px 20px #0A244014; transform:translateY(-2px); }
+  .picker-card.active { border-color:var(--sky); background:var(--navy); }
+  .picker-card.active::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--sky),var(--green)); }
+  .picker-icon { width:38px; height:38px; border-radius:9px; background:var(--light); display:flex; align-items:center; justify-content:center; margin-bottom:14px; transition:background 0.18s; }
+  .picker-card.active .picker-icon { background:#1A3A5C; }
+  .picker-name { font-size:14px; font-weight:600; color:var(--navy); margin-bottom:4px; transition:color 0.18s; display:flex; align-items:center; gap:7px; }
+  .picker-card.active .picker-name { color:#fff; }
+  .picker-desc { font-size:11.5px; font-weight:300; color:var(--muted); line-height:1.5; transition:color 0.18s; }
+  .picker-card.active .picker-desc { color:#8AABCC; }
+  .picker-tag { font-family:'IBM Plex Mono',monospace; font-size:7px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; padding:2px 6px; border-radius:3px; background:#E8F2FF; color:var(--blue); }
+  .picker-card.active .picker-tag { background:var(--sky); color:#fff; }
+  .picker-tag.soon { background:#FFF3E6; color:#C2700E; }
+  .picker-card.active .picker-tag.soon { background:#3A2A1A; color:#F5A623; }
+
+  .tool-panel { display:none; }
+  .tool-panel.active { display:block; }
+
+  .calc-section { background:var(--light); padding:48px; min-height:400px; }
+  .calc-card { background:#fff; border:1px solid var(--mid); border-radius:14px; overflow:hidden; max-width:1080px; margin:0 auto; }
+  .calc-header { background:var(--navy); padding:24px 32px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+  .calc-header-left h2 { font-size:20px; font-weight:700; color:#fff; letter-spacing:-0.01em; }
+  .calc-header-left p { font-size:13px; font-weight:300; color:#8AABCC; margin-top:4px; }
+  .region-select { display:flex; align-items:center; gap:10px; }
+  .region-select-label { font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#4A6A8A; }
+  .region-dropdown { background:#0D1E33; color:#fff; border:1px solid #1E3A5F; border-radius:7px; padding:8px 12px; font-family:'IBM Plex Sans',sans-serif; font-size:13px; cursor:pointer; }
+  .region-dropdown:focus { outline:none; border-color:var(--sky); }
+  .calc-body { padding:32px; }
+  .calc-intro { font-size:13px; color:var(--muted); margin-bottom:8px; line-height:1.7; }
+  .calc-intro strong { color:var(--navy); }
+
+  .annual-row { display:flex; align-items:center; gap:12px; padding:16px 18px; background:#EAF3FF; border:1px solid #CFE4FB; border-radius:10px; margin-bottom:20px; flex-wrap:wrap; }
+  .annual-label { font-size:13px; font-weight:600; color:var(--navy); }
+  .annual-input { padding:9px 12px; border:1px solid var(--mid); border-radius:7px; font-family:'IBM Plex Mono',monospace; font-size:14px; color:var(--navy); width:140px; background:#fff; }
+  .annual-input:focus { outline:none; border-color:var(--sky); }
+  .annual-hint { font-size:12px; color:var(--muted); }
+
+  .fuel-rows { display:flex; flex-direction:column; gap:12px; margin-bottom:24px; }
+  .fuel-row { display:grid; grid-template-columns:1.2fr 1fr auto 0.8fr 0.8fr 0.9fr; gap:14px; align-items:center; padding:14px 16px; background:var(--light); border-radius:10px; border:1px solid var(--mid); }
+  .fuel-row-label { display:flex; align-items:center; gap:10px; }
+  .fuel-dot { width:10px; height:10px; border-radius:3px; flex-shrink:0; }
+  .fuel-name { font-size:14px; font-weight:600; color:var(--navy); }
+  .fuel-input-wrap { display:flex; flex-direction:column; gap:3px; }
+  .fuel-input-label { font-family:'IBM Plex Mono',monospace; font-size:8px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); }
+  .fuel-input { padding:9px 12px; border:1px solid var(--mid); border-radius:7px; font-family:'IBM Plex Mono',monospace; font-size:14px; color:var(--navy); width:100%; background:#fff; }
+  .fuel-input:focus { outline:none; border-color:var(--sky); }
+  .fuel-arrow { font-size:14px; color:#C0CCD8; text-align:center; }
+  .fuel-result { display:flex; flex-direction:column; gap:3px; }
+  .fuel-result-label { font-family:'IBM Plex Mono',monospace; font-size:8px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); }
+  .fuel-result-value { font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:600; color:var(--navy); }
+  .fuel-result-value.empty { color:#C0CCD8; }
+  .fuel-result-value.carbon { color:#1A8A52; }
+  .fuel-result-value.carbon.empty { color:#C0CCD8; }
+  .fuel-result-value.annual { color:var(--blue); }
+  .fuel-result-value.annual.empty { color:#C0CCD8; }
+
+  .calc-results { border-top:1px solid var(--mid); padding-top:24px; }
+  .results-dual { display:grid; grid-template-columns:1fr 1fr; gap:32px; }
+  .results-col-title { font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); margin-bottom:16px; display:flex; align-items:center; gap:8px; }
+  .results-col-title .dot { width:8px; height:8px; border-radius:2px; }
+  .ranking { display:flex; flex-direction:column; gap:8px; }
+  .rank-bar-row { display:grid; grid-template-columns:96px 1fr 92px; gap:10px; align-items:center; }
+  .rank-name { font-size:12.5px; font-weight:500; color:var(--navy); }
+  .rank-track { background:var(--light); border-radius:6px; height:26px; position:relative; overflow:hidden; }
+  .rank-fill { height:100%; border-radius:6px; transition:width 0.5s ease; min-width:2px; }
+  .rank-value { font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; color:var(--navy); text-align:right; }
+  .empty-msg { font-size:13px; color:var(--muted); }
+
+  .insight-callout { margin-top:24px; background:var(--navy); border-radius:10px; padding:20px 24px; display:none; }
+  .insight-callout.show { display:block; }
+  .insight-callout-label { font-family:'IBM Plex Mono',monospace; font-size:8.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--green); margin-bottom:8px; }
+  .insight-callout-text { font-size:14px; color:#C0D4E8; line-height:1.7; }
+  .insight-callout-text strong { color:#fff; font-weight:600; }
+
+  .calc-note { font-size:11px; color:var(--muted); margin-top:20px; line-height:1.6; }
+  .calc-note a { color:var(--sky); text-decoration:none; }
+
+  .soon-panel { max-width:1080px; margin:0 auto; text-align:center; padding:60px 32px; background:#fff; border:1px dashed var(--mid); border-radius:14px; }
+  .soon-icon { width:48px; height:48px; background:var(--light); border-radius:12px; display:flex; align-items:center; justify-content:center; margin:0 auto 18px; }
+  .soon-title { font-size:20px; font-weight:700; color:var(--navy); margin-bottom:8px; }
+  .soon-desc { font-size:14px; font-weight:300; color:var(--muted); max-width:440px; margin:0 auto 20px; line-height:1.7; }
+  .soon-tag { font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:#B5651D; background:#FFF3E6; padding:5px 12px; border-radius:5px; }
+
+  .cta-strip { background:var(--navy); padding:56px 48px; text-align:center; }
+  .cta-strip h2 { font-size:26px; font-weight:700; color:#fff; letter-spacing:-0.01em; margin-bottom:12px; }
+  .cta-strip h2 span { color:var(--sky); font-weight:300; }
+  .cta-strip p { font-size:14px; font-weight:300; color:#8AABCC; max-width:520px; margin:0 auto 28px; line-height:1.7; }
+  .cta-strip-btn { display:inline-block; background:var(--sky); color:#fff; text-decoration:none; padding:14px 30px; border-radius:8px; font-size:14px; font-weight:600; }
+
+  footer { background:#060E1A; padding:48px; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:48px; }
+  .footer-logo { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+  .footer-badge { width:36px; height:36px; background:var(--navy); border:1.5px solid #1E3A5F; border-radius:7px; overflow:hidden; }
+  .footer-badge-bars { display:flex; align-items:flex-end; gap:2px; height:10px; }
+  .footer-bar { width:3px; border-radius:1px 1px 0 0; }
+  .footer-nrg { font-family:'IBM Plex Mono',monospace; font-size:7px; font-weight:500; color:#fff; letter-spacing:0.08em; }
+  .footer-desk { font-family:'IBM Plex Mono',monospace; font-size:5px; color:var(--sky); letter-spacing:0.12em; }
+  .footer-wordmark { display:inline-flex; flex-direction:column; line-height:1; }
+  .footer-wordmark .wm-name { font-size:15px; font-weight:600; color:#fff; }
+  .footer-wordmark .wm-name span { font-weight:300; color:var(--sky); }
+  .footer-wordmark .wm-au { font-size:8px; font-weight:400; letter-spacing:0.3em; text-transform:uppercase; color:#3A5A7A; margin-top:4px; margin-left:0.15em; }
+  .footer-tagline { font-size:12px; font-weight:300; color:#3A5A7A; line-height:1.6; max-width:280px; }
+  .footer-col h4 { font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#3A5A7A; margin-bottom:16px; }
+  .footer-col ul { list-style:none; }
+  .footer-col ul li { margin-bottom:10px; }
+  .footer-col ul li a { font-size:13px; font-weight:300; color:#5A7A9A; text-decoration:none; }
+  .footer-col ul li a:hover { color:#fff; }
+  .footer-bottom { background:#040A12; padding:20px 48px; display:flex; justify-content:space-between; align-items:center; }
+  .footer-bottom p { font-size:11px; color:#2A4A6A; font-family:'IBM Plex Mono',monospace; letter-spacing:0.06em; }
+
+  @keyframes ticker-scroll { 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
+  .mobile-ticker { display:none; }
+
+  @media (max-width:768px) {
+    /* FIXED-NAV-MOBILE: keep nav pinned while scrolling */
+    nav { position: fixed !important; top: 0; left: 0; right: 0; width: 100%; }
+    body { padding-top: 60px; }
+    /* MOBILE-MENU-FIXED: dropdown pinned below fixed nav */
+    .mobile-menu.open { position: fixed; top: 60px; left: 0; right: 0; z-index: 99; max-height: calc(100vh - 60px); overflow-y: auto; }
+
+    .nav-bottom { display:none !important; }
+    .nav-links { display:none !important; }
+    .hamburger { display:flex !important; }
+
+    .nav-top { padding:0 20px; height:60px; }
+    .nav-badge { width:40px; height:40px; border-radius:8px; }
+    .nav-wordmark .wm-name { font-size:21px; } .nav-wordmark .wm-au { font-size:9px; letter-spacing:0.3em; margin-top:3px; margin-left:0.15em; }
+    .nav-ticker { display:none; }
+    .nav-bottom { padding:0 16px; gap:8px; }
+    .nav-links { overflow-x:auto; -webkit-overflow-scrolling:touch; flex:1; }
+    .nav-links a { font-size:11.5px; padding:0 12px; }
+    .nav-cta { font-size:11px !important; padding:6px 12px !important; white-space:nowrap; }
+    .mobile-ticker { display:flex; background:#060E1A; border-bottom:1px solid #0F2A44; padding:7px 0; align-items:center; gap:16px; overflow:hidden; white-space:nowrap; position:relative; }
+    .mobile-ticker-track { display:flex; align-items:center; gap:16px; animation:ticker-scroll 22s linear infinite; padding-left:16px; }
+    .page-head { padding:40px 20px 28px; } .page-head-title { font-size:28px; }
+    .tool-picker-section { padding:28px 16px 4px; }
+    .tool-picker { grid-template-columns:1fr 1fr; gap:10px; }
+    .picker-card { padding:16px; }
+    .calc-section { padding:32px 16px; } .calc-body { padding:20px; } .calc-header { padding:20px; }
+    .fuel-row { grid-template-columns:1fr 1fr; gap:10px; }
+    .fuel-arrow { display:none; }
+    .results-dual { grid-template-columns:1fr; gap:28px; }
+    .rank-bar-row { grid-template-columns:80px 1fr 64px; gap:8px; }
+    .cta-strip { padding:40px 20px; } .cta-strip h2 { font-size:22px; }
+    footer { grid-template-columns:1fr 1fr; padding:40px 20px; gap:32px; }
+    .footer-brand { grid-column:1 / -1; }
+    .footer-bottom { padding:16px 20px; flex-direction:column; gap:6px; text-align:center; }
+  }
+  @media (max-width:480px) {
+    .nav-links a { font-size:11px; padding:0 10px; }
+    .page-head-title { font-size:24px; }
+    .fuel-row { grid-template-columns:1fr; }
+    footer { grid-template-columns:1fr; }
+  }
+  @media (min-width:769px) and (max-width:1080px) {
+    .nav-top { padding:0 24px; } .nav-bottom { padding:0 24px; }
+    .ticker-label { display:none; } .nav-ticker { gap:12px; } .ticker-updated { display:none; }
+    .page-head { padding:48px 24px 32px; }
+    .tool-picker-section { padding:32px 24px 4px; }
+    .tool-picker { grid-template-columns:repeat(3,1fr); }
+    .calc-section { padding:32px 24px; }
+    .cta-strip { padding:48px 24px; }
+  }
+
+  /* Hamburger + mobile menu */
+  .hamburger { display:none; flex-direction:column; justify-content:center; gap:5px; background:none; border:none; cursor:pointer; padding:8px; margin-left:auto; }
+  .hamburger span { display:block; width:24px; height:2.5px; background:#fff; border-radius:2px; transition:transform 0.25s, opacity 0.25s; }
+  .hamburger.active span:nth-child(1) { transform:translateY(7.5px) rotate(45deg); }
+  .hamburger.active span:nth-child(2) { opacity:0; }
+  .hamburger.active span:nth-child(3) { transform:translateY(-7.5px) rotate(-45deg); }
+  .mobile-menu { display:none; flex-direction:column; background:#0D1E33; border-top:1px solid #1E3A5F; }
+  .mobile-menu.open { display:flex; }
+  .mobile-menu a { color:#C0D4E8; text-decoration:none; font-size:15px; font-weight:500; padding:16px 24px; border-bottom:1px solid #16304E; }
+  .mobile-menu a:active, .mobile-menu a:hover { background:#143052; color:#fff; }
+  .mobile-menu .mobile-menu-cta { background:var(--sky); color:#fff; font-weight:600; text-align:center; border-bottom:none; margin:12px 16px 4px; border-radius:6px; }
+
+
+  /* Force intended light rendering even if device requests dark mode */
+  @media (prefers-color-scheme: dark) {
+    html, body { background:#ffffff !important; color:#1A2A3A !important; }
+    .about-section, .principles-section, .contact-section, .featured-section,
+    .hp-section, .bp-section, section { background:#ffffff; }
+    .about-section { background:#ffffff !important; }
+    .principles-section, .bp-section-alt { background:#F4F7FB !important; }
+    .about-text p, .about-h2, .contact-h2, .bp-card h3, .hp-card h3,
+    .principle-block h3, .form-row label { color:#1A2A3A !important; }
+    .about-aside, .contact-card, .bp-card, .hp-card, .principle-block { background:#F4F7FB !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-top">
+    <div class="nav-logo">
+      <div class="nav-badge">
+        <svg viewBox="0 0 120 120" width="100%" height="100%" style="display:block;">
+          <rect x="24" y="48" width="12" height="37" rx="2.5" fill="#2E6DA4"/>
+          <rect x="39" y="24" width="12" height="61" rx="2.5" fill="#34C77B"/>
+          <rect x="54" y="38" width="12" height="47" rx="2.5" fill="#3B9EFF"/>
+          <rect x="69" y="60" width="12" height="25" rx="2.5" fill="#2E6DA4"/>
+          <rect x="84" y="44" width="12" height="41" rx="2.5" fill="#3B9EFF"/>
+          <rect x="18" y="88" width="84" height="7" rx="3.5" fill="#3B9EFF"/>
+        </svg>
+      </div>
+      <span class="nav-wordmark"><span class="wm-name">Energy<span>Desk</span></span><span class="wm-au">Australia</span></span>
+    </div>
+    <div class="nav-ticker">
+      <span class="ticker-label">NEM Spot $/MWh</span>
+      <div class="ticker-item"><span class="ticker-state">NSW</span><span class="ticker-price up" id="nsw-price">$94.20</span><span class="ticker-arrow up">▲</span></div>
+      <div class="ticker-divider"></div>
+      <div class="ticker-item"><span class="ticker-state">VIC</span><span class="ticker-price down" id="vic-price">$82.50</span><span class="ticker-arrow down">▼</span></div>
+      <div class="ticker-divider"></div>
+      <div class="ticker-item"><span class="ticker-state">QLD</span><span class="ticker-price up" id="qld-price">$108.75</span><span class="ticker-arrow up">▲</span></div>
+      <div class="ticker-divider"></div>
+      <div class="ticker-item"><span class="ticker-state">SA</span><span class="ticker-price mid" id="sa-price">$77.30</span><span class="ticker-arrow down">▼</span></div>
+      <div class="ticker-divider"></div>
+      <div class="ticker-item"><span class="ticker-state">TAS</span><span class="ticker-price down" id="tas-price">$68.90</span><span class="ticker-arrow down">▼</span></div>
+      <div class="ticker-divider"></div>
+      <span class="ticker-updated" id="ticker-time">5-min dispatch · updating</span>
+    </div>
+  <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+  <div class="nav-bottom">
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/markets">Markets</a></li>
+      <li><a href="/insights">Insights</a></li>
+      <li><a href="#" class="active">Tools</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <a href="/services" class="nav-cta"><span class="cta-small">Get a</span>Report</a>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="/">Home</a>
+    <a href="/markets">Markets</a>
+    <a href="/insights">Insights</a>
+    <a href="/tools">Tools</a>
+    <a href="/services">Services</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/services" class="mobile-menu-cta">Get a Report →</a>
+</div>
+
+<script>
+  (function() {
+    const prices = { nsw:94.20, vic:82.50, qld:108.75, sa:77.30, tas:68.90 };
+    const states = ['nsw','vic','qld','sa','tas'];
+    function updateTicker() {
+      states.forEach(function(s) {
+        const el = document.getElementById(s + '-price'); if (!el) return;
+        const arrow = el.nextElementSibling;
+        prices[s] = Math.max(10, prices[s] + (Math.random()-0.48)*8);
+        const prev = parseFloat(el.textContent.replace('$',''));
+        el.textContent = '$' + prices[s].toFixed(2);
+        const dir = prices[s] >= prev ? 'up' : 'down';
+        el.className = 'ticker-price ' + dir;
+        if (arrow) { arrow.className = 'ticker-arrow ' + dir; arrow.textContent = dir==='up'?'▲':'▼'; }
+      });
+      const t = document.getElementById('ticker-time');
+      if (t) { const n = new Date(); t.textContent = '5-min dispatch · ' + n.toLocaleTimeString('en-AU',{hour:'2-digit',minute:'2-digit',second:'2-digit'}); }
+    }
+    setInterval(updateTicker, 5000); updateTicker();
+  })();
+</script>
+
+<!-- MOBILE TICKER -->
+<div class="mobile-ticker">
+  <div class="mobile-ticker-track">
+    <span class="ticker-label">NEM Spot $/MWh</span>
+    <div class="ticker-item"><span class="ticker-state">NSW</span><span class="ticker-price up">$94.20</span><span class="ticker-arrow up">▲</span></div>
+    <div class="ticker-divider"></div>
+    <div class="ticker-item"><span class="ticker-state">VIC</span><span class="ticker-price down">$82.50</span><span class="ticker-arrow down">▼</span></div>
+    <div class="ticker-divider"></div>
+    <div class="ticker-item"><span class="ticker-state">QLD</span><span class="ticker-price up">$108.75</span><span class="ticker-arrow up">▲</span></div>
+    <div class="ticker-divider"></div>
+    <div class="ticker-item"><span class="ticker-state">SA</span><span class="ticker-price mid">$77.30</span><span class="ticker-arrow down">▼</span></div>
+    <div class="ticker-divider"></div>
+    <div class="ticker-item"><span class="ticker-state">TAS</span><span class="ticker-price down">$68.90</span><span class="ticker-arrow down">▼</span></div>
+    <div class="ticker-divider"></div>
+    <span class="ticker-label">NEM Spot $/MWh</span>
+    <div class="ticker-item"><span class="ticker-state">NSW</span><span class="ticker-price up">$94.20</span><span class="ticker-arrow up">▲</span></div>
+    <div class="ticker-divider"></div>
+    <div class="ticker-item"><span class="ticker-state">VIC</span><span class="ticker-price down">$82.50</span><span class="ticker-arrow down">▼</span></div>
+    <div class="ticker-divider"></div>
+    <div class="ticker-item"><span class="ticker-state">QLD</span><span class="ticker-price up">$108.75</span><span class="ticker-arrow up">▲</span></div>
+    <div class="ticker-divider"></div>
+    <div class="ticker-item"><span class="ticker-state">SA</span><span class="ticker-price mid">$77.30</span><span class="ticker-arrow down">▼</span></div>
+    <div class="ticker-divider"></div>
+    <div class="ticker-item"><span class="ticker-state">TAS</span><span class="ticker-price down">$68.90</span><span class="ticker-arrow down">▼</span></div>
+    <div class="ticker-divider"></div>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<section class="page-head">
+  <p class="page-head-eyebrow">Free Tools</p>
+  <h1 class="page-head-title">Energy & carbon <span>calculators</span></h1>
+  <p class="page-head-sub">Practical, free tools to help you understand your energy costs and emissions on a like-for-like basis. Pick a tool below to get started.</p>
+</section>
+
+<!-- TOOL PICKER GRID -->
+<section class="tool-picker-section">
+  <p class="tool-picker-label">Choose a calculator</p>
+  <div class="tool-picker">
+    <button class="picker-card active" id="pick-0" onclick="switchTool(0)">
+      <div class="picker-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="11" width="3.5" height="7" rx="1" fill="#3B9EFF" opacity="0.5"/><rect x="8" y="6" width="3.5" height="12" rx="1" fill="#3B9EFF" opacity="0.8"/><rect x="14" y="2" width="3.5" height="16" rx="1" fill="#34C77B"/></svg></div>
+      <span class="picker-name">Fuel Comparator <span class="picker-tag">Live</span></span>
+      <span class="picker-desc">Compare every fuel on a common $/GJ basis, cost and carbon side by side.</span>
+    </button>
+    <button class="picker-card" id="pick-1" onclick="switchTool(1)">
+      <div class="picker-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="#34C77B" stroke-width="1.6" fill="none"/><path d="M10 5.5v4.5l3 2" stroke="#3B9EFF" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+      <span class="picker-name">Carbon Calculator <span class="picker-tag">Live</span></span>
+      <span class="picker-desc">Estimate your annual Scope 1 &amp; 2 emissions from energy use.</span>
+    </button>
+    <button class="picker-card" id="pick-2" onclick="switchTool(2)">
+      <div class="picker-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 7h9l-2.5-2.5M16 13H7l2.5 2.5" stroke="#3B9EFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+      <span class="picker-name">Unit Converter <span class="picker-tag">Live</span></span>
+      <span class="picker-desc">Convert between MJ, GJ, kWh, therms, MMBtu and more, instantly.</span>
+    </button>
+    <button class="picker-card" id="pick-3" onclick="switchTool(3)">
+      <div class="picker-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 12c0-2 2-2.5 2-4.5S6 4 6 4M10 12c0-2 2-2.5 2-4.5S10 4 10 4M14 12c0-2 2-2.5 2-4.5S14 4 14 4" stroke="#F59E42" stroke-width="1.4" stroke-linecap="round" fill="none"/><rect x="3" y="14" width="14" height="3" rx="1.5" fill="#3B9EFF"/></svg></div>
+      <span class="picker-name">Steam Calculator <span class="picker-tag">Live</span></span>
+      <span class="picker-desc">Estimate fuel energy and cost to raise process steam at your efficiency.</span>
+    </button>
+    <button class="picker-card" id="pick-4" onclick="switchTool(4)">
+      <div class="picker-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="4" fill="#F59E42"/><path d="M10 1v2.5M10 16.5V19M19 10h-2.5M3.5 10H1M16 4l-1.8 1.8M5.8 14.2L4 16M16 16l-1.8-1.8M5.8 5.8L4 4" stroke="#F59E42" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+      <span class="picker-name">Solar Offset <span class="picker-tag">Live</span></span>
+      <span class="picker-desc">Estimate generation, bill savings and payback for rooftop solar.</span>
+    </button>
+    <button class="picker-card" id="pick-5" onclick="switchTool(5)">
+      <div class="picker-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 14L8 9l4 3 5-9" stroke="#3B9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="17" cy="3" r="2" fill="#34C77B"/></svg></div>
+      <span class="picker-name">Fuel Switch <span class="picker-tag soon">Soon</span></span>
+      <span class="picker-desc">Model cost, emissions and payback of switching fuels.</span>
+    </button>
+    <button class="picker-card" id="pick-6" onclick="switchTool(6)">
+      <div class="picker-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="11" width="3.5" height="7" rx="1" fill="#3B9EFF" opacity="0.6"/><rect x="8" y="7" width="3.5" height="11" rx="1" fill="#3B9EFF" opacity="0.8"/><rect x="14" y="3" width="3.5" height="15" rx="1" fill="#34C77B"/></svg></div>
+      <span class="picker-name">Bill Benchmark <span class="picker-tag soon">Soon</span></span>
+      <span class="picker-desc">See how your energy rates compare to regional market benchmarks.</span>
+    </button>
+    <button class="picker-card" id="pick-7" onclick="switchTool(7)">
+      <div class="picker-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2v16M6 5.5h6a2 2 0 010 4H8a2 2 0 000 4h6" stroke="#34C77B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+      <span class="picker-name">Payback Calculator <span class="picker-tag">Live</span></span>
+      <span class="picker-desc">Work out how fast an energy-saving upgrade pays for itself.</span>
+    </button>
+  </div>
+</section>
+
+<!-- TOOL 1: FUEL COMPARATOR -->
+<div class="tool-panel active" id="panel-0">
+<section class="calc-section">
+  <div class="calc-card">
+    <div class="calc-header">
+      <div class="calc-header-left">
+        <h2>Fuel Cost &amp; Carbon Comparator</h2>
+        <p>Compare what you pay across fuels, cost and emissions, side by side</p>
+      </div>
+      <div class="region-select">
+        <span class="region-select-label">Prefill region</span>
+        <select class="region-dropdown" id="region" onchange="applyRegion()">
+          <option value="">Choose…</option>
+          <option value="nsw">NSW market</option>
+          <option value="vic">VIC market</option>
+          <option value="qld">QLD market</option>
+          <option value="sa">SA market</option>
+          <option value="custom">Clear / custom</option>
+        </select>
+      </div>
+    </div>
+    <div class="calc-body">
+      <p class="calc-intro">Enter what you pay for any fuels below, or prefill with current market prices for your region. Everything converts to a common <strong>$/GJ</strong> basis so you can see the true cost of delivered energy, alongside the carbon emissions of each.</p>
+
+      <div class="annual-row">
+        <span class="annual-label">Annual energy use (optional):</span>
+        <input class="annual-input" type="number" id="annual-gj" placeholder="e.g. 5000" oninput="recalc()">
+        <span class="annual-hint">GJ per year, adds an annual cost to each fuel and the ranking below</span>
+      </div>
+
+      <div class="fuel-rows">
+        <div class="fuel-row">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#3B9EFF;"></span><span class="fuel-name">Electricity</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">Price (c/kWh)</span><input class="fuel-input" type="number" id="in-elec" placeholder="28" oninput="recalc()"></div>
+          <div class="fuel-arrow">→</div>
+          <div class="fuel-result"><span class="fuel-result-label">Cost $/GJ</span><span class="fuel-result-value empty" id="out-elec">–</span></div>
+          <div class="fuel-result"><span class="fuel-result-label">kg CO₂-e/GJ</span><span class="fuel-result-value carbon empty" id="em-elec">–</span></div>
+          <div class="fuel-result"><span class="fuel-result-label">Annual $</span><span class="fuel-result-value annual empty" id="an-elec">–</span></div>
+        </div>
+        <div class="fuel-row">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#2E6DA4;"></span><span class="fuel-name">Natural Gas</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">Price ($/GJ)</span><input class="fuel-input" type="number" id="in-gas" placeholder="13.50" oninput="recalc()"></div>
+          <div class="fuel-arrow">→</div>
+          <div class="fuel-result"><span class="fuel-result-label">Cost $/GJ</span><span class="fuel-result-value empty" id="out-gas">–</span></div>
+          <div class="fuel-result"><span class="fuel-result-label">kg CO₂-e/GJ</span><span class="fuel-result-value carbon empty" id="em-gas">–</span></div>
+          <div class="fuel-result"><span class="fuel-result-label">Annual $</span><span class="fuel-result-value annual empty" id="an-gas">–</span></div>
+        </div>
+        <div class="fuel-row">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#F59E42;"></span><span class="fuel-name">Diesel</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">Price (c/L)</span><input class="fuel-input" type="number" id="in-diesel" placeholder="187" oninput="recalc()"></div>
+          <div class="fuel-arrow">→</div>
+          <div class="fuel-result"><span class="fuel-result-label">Cost $/GJ</span><span class="fuel-result-value empty" id="out-diesel">–</span></div>
+          <div class="fuel-result"><span class="fuel-result-label">kg CO₂-e/GJ</span><span class="fuel-result-value carbon empty" id="em-diesel">–</span></div>
+          <div class="fuel-result"><span class="fuel-result-label">Annual $</span><span class="fuel-result-value annual empty" id="an-diesel">–</span></div>
+        </div>
+        <div class="fuel-row">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#9B6DD4;"></span><span class="fuel-name">LPG</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">Price (c/L)</span><input class="fuel-input" type="number" id="in-lpg" placeholder="107" oninput="recalc()"></div>
+          <div class="fuel-arrow">→</div>
+          <div class="fuel-result"><span class="fuel-result-label">Cost $/GJ</span><span class="fuel-result-value empty" id="out-lpg">–</span></div>
+          <div class="fuel-result"><span class="fuel-result-label">kg CO₂-e/GJ</span><span class="fuel-result-value carbon empty" id="em-lpg">–</span></div>
+          <div class="fuel-result"><span class="fuel-result-label">Annual $</span><span class="fuel-result-value annual empty" id="an-lpg">–</span></div>
+        </div>
+        <div class="fuel-row">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#5A6A7A;"></span><span class="fuel-name">Coal (thermal)</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">Price ($/tonne)</span><input class="fuel-input" type="number" id="in-coal" placeholder="197" oninput="recalc()"></div>
+          <div class="fuel-arrow">→</div>
+          <div class="fuel-result"><span class="fuel-result-label">Cost $/GJ</span><span class="fuel-result-value empty" id="out-coal">–</span></div>
+          <div class="fuel-result"><span class="fuel-result-label">kg CO₂-e/GJ</span><span class="fuel-result-value carbon empty" id="em-coal">–</span></div>
+          <div class="fuel-result"><span class="fuel-result-label">Annual $</span><span class="fuel-result-value annual empty" id="an-coal">–</span></div>
+        </div>
+      </div>
+
+      <div class="calc-results">
+        <div class="results-dual">
+          <div class="results-col">
+            <p class="results-col-title"><span class="dot" style="background:#3B9EFF;"></span>Cost ranking ($/GJ, lower is cheaper)</p>
+            <div class="ranking" id="ranking-cost"><p class="empty-msg">Enter at least one price to compare.</p></div>
+          </div>
+          <div class="results-col">
+            <p class="results-col-title"><span class="dot" style="background:#34C77B;"></span>Carbon ranking (kg CO₂-e/GJ, lower is cleaner)</p>
+            <div class="ranking" id="ranking-carbon"><p class="empty-msg">Enter at least one price to compare.</p></div>
+          </div>
+        </div>
+
+        <div class="insight-callout" id="insight">
+          <p class="insight-callout-label">EnergyDesk Insight</p>
+          <p class="insight-callout-text" id="insight-text"></p>
+        </div>
+
+        <p class="calc-note">Conversions use NGA energy content factors (electricity 3.6 MJ/kWh, diesel 38.6 MJ/L, LPG 25.7 MJ/L, coal ≈ 27 GJ/tonne) and combustion emissions factors (gas 51.4, LPG 60.2, diesel 70.2, coal 90.2 kg CO₂-e/GJ; electricity uses an indicative grid Scope 2 factor of 68 kg CO₂-e/GJ). Indicative only. For a tailored analysis, <a href="/services">request a custom report →</a>. Factors per the <a href="https://www.dcceew.gov.au/climate-change/publications/national-greenhouse-accounts-factors" target="_blank">National Greenhouse Accounts ↗</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- TOOL 2: CARBON CALCULATOR -->
+<div class="tool-panel" id="panel-1">
+<section class="calc-section">
+  <div class="calc-card">
+    <div class="calc-header">
+      <div class="calc-header-left">
+        <h2>Carbon Emissions Calculator</h2>
+        <p>Estimate your annual Scope 1 &amp; 2 emissions from energy use</p>
+      </div>
+    </div>
+    <div class="calc-body">
+      <p class="calc-intro" style="margin-bottom:20px;">Enter your annual consumption for each fuel you use. The calculator applies NGA emissions factors to estimate your total annual emissions in tonnes of CO₂-e.</p>
+      <div class="fuel-rows">
+        <div class="fuel-row" style="grid-template-columns:1.3fr 1fr auto 1fr;">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#3B9EFF;"></span><span class="fuel-name">Electricity</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">kWh / year</span><input class="fuel-input" type="number" id="c-elec" placeholder="100000" oninput="recalcCarbon()"></div>
+          <div class="fuel-arrow">→</div>
+          <div class="fuel-result"><span class="fuel-result-label">t CO₂-e/yr</span><span class="fuel-result-value carbon empty" id="ce-elec">–</span></div>
+        </div>
+        <div class="fuel-row" style="grid-template-columns:1.3fr 1fr auto 1fr;">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#2E6DA4;"></span><span class="fuel-name">Natural Gas</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">GJ / year</span><input class="fuel-input" type="number" id="c-gas" placeholder="2000" oninput="recalcCarbon()"></div>
+          <div class="fuel-arrow">→</div>
+          <div class="fuel-result"><span class="fuel-result-label">t CO₂-e/yr</span><span class="fuel-result-value carbon empty" id="ce-gas">–</span></div>
+        </div>
+        <div class="fuel-row" style="grid-template-columns:1.3fr 1fr auto 1fr;">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#F59E42;"></span><span class="fuel-name">Diesel</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">Litres / year</span><input class="fuel-input" type="number" id="c-diesel" placeholder="50000" oninput="recalcCarbon()"></div>
+          <div class="fuel-arrow">→</div>
+          <div class="fuel-result"><span class="fuel-result-label">t CO₂-e/yr</span><span class="fuel-result-value carbon empty" id="ce-diesel">–</span></div>
+        </div>
+        <div class="fuel-row" style="grid-template-columns:1.3fr 1fr auto 1fr;">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#9B6DD4;"></span><span class="fuel-name">LPG</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">Litres / year</span><input class="fuel-input" type="number" id="c-lpg" placeholder="20000" oninput="recalcCarbon()"></div>
+          <div class="fuel-arrow">→</div>
+          <div class="fuel-result"><span class="fuel-result-label">t CO₂-e/yr</span><span class="fuel-result-value carbon empty" id="ce-lpg">–</span></div>
+        </div>
+      </div>
+      <div class="calc-results">
+        <div class="insight-callout show" id="carbon-total">
+          <p class="insight-callout-label">Estimated total annual emissions</p>
+          <p class="insight-callout-text"><strong id="carbon-total-val" style="font-size:28px;">0.0 t CO₂-e</strong> <span id="carbon-total-context"></span></p>
+        </div>
+        <p class="calc-note">Emissions factors: electricity Scope 2 ≈ 0.68 kg CO₂-e/kWh (national indicative, varies by state), gas 51.4 kg/GJ, diesel 2.71 kg/L, LPG 1.55 kg/L. Indicative only and not a substitute for formal NGER reporting. Factors per the <a href="https://www.dcceew.gov.au/climate-change/publications/national-greenhouse-accounts-factors" target="_blank">National Greenhouse Accounts ↗</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- TOOL 3: UNIT CONVERTER -->
+<div class="tool-panel" id="panel-2">
+<section class="calc-section">
+  <div class="calc-card">
+    <div class="calc-header">
+      <div class="calc-header-left">
+        <h2>Energy Unit Converter</h2>
+        <p>Convert between common energy units instantly</p>
+      </div>
+    </div>
+    <div class="calc-body">
+      <p class="calc-intro" style="margin-bottom:20px;">Enter a value and choose its unit, the equivalent in all other common energy units is shown below. Useful for reconciling bills, contracts and equipment specs that use different units.</p>
+      <div class="annual-row" style="background:#EAF3FF;">
+        <input class="annual-input" type="number" id="conv-val" placeholder="1000" oninput="recalcConv()" style="width:160px;">
+        <select class="region-dropdown" id="conv-unit" onchange="recalcConv()" style="background:#fff;color:var(--navy);border-color:var(--mid);">
+          <option value="1">MJ (megajoules)</option>
+          <option value="1000" selected>GJ (gigajoules)</option>
+          <option value="3.6">kWh</option>
+          <option value="3600">MWh</option>
+          <option value="105.5">therms</option>
+          <option value="1055.06">MMBtu</option>
+          <option value="0.00105506">BTU</option>
+          <option value="0.004184">kcal</option>
+        </select>
+        <span class="annual-hint">Choose the unit your value is in</span>
+      </div>
+      <div class="fuel-rows" id="conv-results"></div>
+      <p class="calc-note">Standard energy conversions. 1 kWh = 3.6 MJ · 1 GJ = 1000 MJ · 1 therm = 105.5 MJ · 1 MMBtu = 1055.06 MJ.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- TOOL 4: STEAM CALCULATOR -->
+<div class="tool-panel" id="panel-3">
+<section class="calc-section">
+  <div class="calc-card">
+    <div class="calc-header">
+      <div class="calc-header-left">
+        <h2>Steam &amp; Boiler Calculator</h2>
+        <p>Estimate the fuel energy and cost to raise process steam</p>
+      </div>
+    </div>
+    <div class="calc-body">
+      <p class="calc-intro" style="margin-bottom:20px;">Estimate the fuel energy needed to generate steam, accounting for boiler efficiency. Enter your steam output, efficiency and (optionally) a fuel price to see running cost.</p>
+      <div class="fuel-rows">
+        <div class="fuel-row" style="grid-template-columns:1.3fr 1fr;">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#3B9EFF;"></span><span class="fuel-name">Steam output</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">tonnes / hour</span><input class="fuel-input" type="number" id="steam-tph" placeholder="5" oninput="recalcSteam()"></div>
+        </div>
+        <div class="fuel-row" style="grid-template-columns:1.3fr 1fr;">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#F59E42;"></span><span class="fuel-name">Boiler efficiency</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">% (typ. 80–85)</span><input class="fuel-input" type="number" id="steam-eff" placeholder="82" oninput="recalcSteam()"></div>
+        </div>
+        <div class="fuel-row" style="grid-template-columns:1.3fr 1fr;">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#2E6DA4;"></span><span class="fuel-name">Operating hours</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">hours / year</span><input class="fuel-input" type="number" id="steam-hrs" placeholder="6000" oninput="recalcSteam()"></div>
+        </div>
+        <div class="fuel-row" style="grid-template-columns:1.3fr 1fr;">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#34C77B;"></span><span class="fuel-name">Fuel price (optional)</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">$/GJ</span><input class="fuel-input" type="number" id="steam-price" placeholder="13.50" oninput="recalcSteam()"></div>
+        </div>
+      </div>
+      <div class="calc-results">
+        <div class="insight-callout show" id="steam-out">
+          <p class="insight-callout-label">Estimated fuel requirement</p>
+          <p class="insight-callout-text" id="steam-text">Enter your steam output to calculate.</p>
+        </div>
+        <p class="calc-note">Assumes a net enthalpy rise of ~2.34 GJ per tonne of steam (saturated steam at low pressure from ~85°C feedwater). Actual figures vary with pressure, feedwater temperature and blowdown. Indicative only.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- TOOL 5: SOLAR OFFSET -->
+<div class="tool-panel" id="panel-4">
+<section class="calc-section">
+  <div class="calc-card">
+    <div class="calc-header">
+      <div class="calc-header-left">
+        <h2>Solar Offset Estimator</h2>
+        <p>Estimate annual generation, bill savings and payback for a rooftop solar system</p>
+      </div>
+    </div>
+    <div class="calc-body">
+      <p class="calc-intro" style="margin-bottom:20px;">A high-level estimate of what a rooftop solar system could generate and save. For indicative guidance only, a detailed assessment should account for your load profile, roof orientation and feed-in tariff.</p>
+      <div class="fuel-rows">
+        <div class="fuel-row" style="grid-template-columns:1.3fr 1fr;">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#F59E42;"></span><span class="fuel-name">System size</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">kW</span><input class="fuel-input" type="number" id="solar-kw" placeholder="30" oninput="recalcSolar()"></div>
+        </div>
+        <div class="fuel-row" style="grid-template-columns:1.3fr 1fr;">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#3B9EFF;"></span><span class="fuel-name">State</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">location</span>
+            <select class="fuel-input" id="solar-state" onchange="recalcSolar()">
+              <option value="1380">NSW</option><option value="1250">VIC</option><option value="1500">QLD</option>
+              <option value="1450">SA</option><option value="1550">WA</option><option value="1100">TAS</option>
+            </select>
+          </div>
+        </div>
+        <div class="fuel-row" style="grid-template-columns:1.3fr 1fr;">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#2E6DA4;"></span><span class="fuel-name">Electricity price</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">c/kWh</span><input class="fuel-input" type="number" id="solar-price" placeholder="28" oninput="recalcSolar()"></div>
+        </div>
+        <div class="fuel-row" style="grid-template-columns:1.3fr 1fr;">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#34C77B;"></span><span class="fuel-name">Install cost (optional)</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">$ total</span><input class="fuel-input" type="number" id="solar-cost" placeholder="30000" oninput="recalcSolar()"></div>
+        </div>
+      </div>
+      <div class="calc-results">
+        <div class="insight-callout show" id="solar-out">
+          <p class="insight-callout-label">Estimated solar performance</p>
+          <p class="insight-callout-text" id="solar-text">Enter system size and electricity price to calculate.</p>
+        </div>
+        <p class="calc-note">Generation estimates use indicative annual yields per kW by state (NSW ~1,380 kWh, VIC ~1,250, QLD ~1,500, SA ~1,450, WA ~1,550, TAS ~1,100). Assumes ~80% of generation offsets grid consumption. Indicative only; excludes STCs, feed-in tariffs and degradation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- TOOL 6: FUEL SWITCH (soon) -->
+<div class="tool-panel" id="panel-5">
+<section class="calc-section">
+  <div class="soon-panel">
+    <div class="soon-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 16L8 10l5 4 5-10" stroke="#3B9EFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="18" cy="4" r="2.5" fill="#34C77B"/></svg></div>
+    <h3 class="soon-title">Fuel Switch Analyser</h3>
+    <p class="soon-desc">Model the full cost and emissions impact of switching your boiler, kiln or fleet from one fuel to another, including capital payback and carbon reduction over time.</p>
+    <span class="soon-tag">In development</span>
+  </div>
+</section>
+</div>
+
+<!-- TOOL 7: BILL BENCHMARK (soon) -->
+<div class="tool-panel" id="panel-6">
+<section class="calc-section">
+  <div class="soon-panel">
+    <div class="soon-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="12" width="4" height="8" rx="1" fill="#3B9EFF" opacity="0.5"/><rect x="9" y="7" width="4" height="13" rx="1" fill="#3B9EFF" opacity="0.8"/><rect x="16" y="2" width="4" height="18" rx="1" fill="#34C77B"/></svg></div>
+    <h3 class="soon-title">Bill Benchmark</h3>
+    <p class="soon-desc">See how your energy rates stack up against regional market benchmarks for businesses of your size and sector, so you know whether you're overpaying.</p>
+    <span class="soon-tag">In development</span>
+  </div>
+</section>
+</div>
+
+<!-- TOOL 8: PAYBACK CALCULATOR -->
+<div class="tool-panel" id="panel-7">
+<section class="calc-section">
+  <div class="calc-card">
+    <div class="calc-header">
+      <div class="calc-header-left">
+        <h2>Payback Calculator</h2>
+        <p>Work out how quickly an energy-saving investment pays for itself</p>
+      </div>
+    </div>
+    <div class="calc-body">
+      <p class="calc-intro" style="margin-bottom:20px;">Enter the upfront cost of an upgrade (LED lighting, a more efficient boiler, insulation, solar, etc.) and the annual saving you expect. The calculator shows simple payback, return on investment and total savings over the equipment's life.</p>
+      <div class="fuel-rows">
+        <div class="fuel-row" style="grid-template-columns:1.3fr 1fr;">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#3B9EFF;"></span><span class="fuel-name">Upfront cost</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">$ total</span><input class="fuel-input" type="number" id="pb-cost" placeholder="25000" oninput="recalcPayback()"></div>
+        </div>
+        <div class="fuel-row" style="grid-template-columns:1.3fr 1fr;">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#34C77B;"></span><span class="fuel-name">Annual saving</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">$ / year</span><input class="fuel-input" type="number" id="pb-saving" placeholder="6000" oninput="recalcPayback()"></div>
+        </div>
+        <div class="fuel-row" style="grid-template-columns:1.3fr 1fr;">
+          <div class="fuel-row-label"><span class="fuel-dot" style="background:#F59E42;"></span><span class="fuel-name">Equipment life (optional)</span></div>
+          <div class="fuel-input-wrap"><span class="fuel-input-label">years</span><input class="fuel-input" type="number" id="pb-life" placeholder="15" oninput="recalcPayback()"></div>
+        </div>
+      </div>
+      <div class="calc-results">
+        <div class="insight-callout show" id="pb-out">
+          <p class="insight-callout-label">Payback &amp; return</p>
+          <p class="insight-callout-text" id="pb-text">Enter a cost and annual saving to calculate.</p>
+        </div>
+        <p class="calc-note">Simple payback ignores discount rates, inflation and maintenance. For a full investment case including these factors, <a href="/services">request a custom report →</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<script>
+  function switchTool(i) {
+    document.querySelectorAll('.picker-card').forEach(function(t, idx){ t.classList.toggle('active', idx===i); });
+    document.querySelectorAll('.tool-panel').forEach(function(p, idx){ p.classList.toggle('active', idx===i); });
+  }
+
+  const EM = { 'Electricity':68, 'Natural Gas':51.4, 'Diesel':70.2, 'LPG':60.2, 'Coal (thermal)':90.2 };
+  const COLORS = { 'Electricity':'#3B9EFF', 'Natural Gas':'#2E6DA4', 'Diesel':'#F59E42', 'LPG':'#9B6DD4', 'Coal (thermal)':'#5A6A7A' };
+  const REGION_PRICES = {
+    nsw: { elec:28, gas:13.5, diesel:187, lpg:107, coal:197 },
+    vic: { elec:25, gas:13.05, diesel:184, lpg:105, coal:197 },
+    qld: { elec:26, gas:12.8, diesel:190, lpg:110, coal:197 },
+    sa:  { elec:31, gas:14.1, diesel:186, lpg:107, coal:197 }
+  };
+
+  function applyRegion() {
+    const r = document.getElementById('region').value;
+    const ids = ['in-elec','in-gas','in-diesel','in-lpg','in-coal'];
+    if (r === 'custom' || r === '') {
+      ids.forEach(function(id){ document.getElementById(id).value=''; });
+    } else if (REGION_PRICES[r]) {
+      const p = REGION_PRICES[r];
+      document.getElementById('in-elec').value = p.elec;
+      document.getElementById('in-gas').value = p.gas;
+      document.getElementById('in-diesel').value = p.diesel;
+      document.getElementById('in-lpg').value = p.lpg;
+      document.getElementById('in-coal').value = p.coal;
+    }
+    recalc();
+  }
+
+  function recalc() {
+    const elec = parseFloat(document.getElementById('in-elec').value);
+    const gas  = parseFloat(document.getElementById('in-gas').value);
+    const dies = parseFloat(document.getElementById('in-diesel').value);
+    const lpg  = parseFloat(document.getElementById('in-lpg').value);
+    const coal = parseFloat(document.getElementById('in-coal').value);
+    const annual = parseFloat(document.getElementById('annual-gj').value);
+
+    const cost = {};
+    if (!isNaN(elec) && elec>0) cost['Electricity'] = (elec/100)/0.0036;
+    if (!isNaN(gas)  && gas>0)  cost['Natural Gas'] = gas;
+    if (!isNaN(dies) && dies>0) cost['Diesel'] = (dies/100)/0.0386;
+    if (!isNaN(lpg)  && lpg>0)  cost['LPG'] = (lpg/100)/0.0257;
+    if (!isNaN(coal) && coal>0) cost['Coal (thermal)'] = coal/27;
+
+    const outMap = { 'Electricity':'out-elec','Natural Gas':'out-gas','Diesel':'out-diesel','LPG':'out-lpg','Coal (thermal)':'out-coal' };
+    const emMap  = { 'Electricity':'em-elec','Natural Gas':'em-gas','Diesel':'em-diesel','LPG':'em-lpg','Coal (thermal)':'em-coal' };
+    const anMap  = { 'Electricity':'an-elec','Natural Gas':'an-gas','Diesel':'an-diesel','LPG':'an-lpg','Coal (thermal)':'an-coal' };
+    Object.keys(outMap).forEach(function(name){
+      const co = document.getElementById(outMap[name]);
+      const ce = document.getElementById(emMap[name]);
+      const an = document.getElementById(anMap[name]);
+      if (cost[name] !== undefined) {
+        co.textContent = '$' + cost[name].toFixed(2); co.classList.remove('empty');
+        ce.textContent = EM[name].toFixed(0); ce.classList.remove('empty');
+        if (!isNaN(annual) && annual>0) {
+          an.textContent = '$' + Math.round(cost[name]*annual).toLocaleString(); an.classList.remove('empty');
+        } else { an.textContent = '–'; an.classList.add('empty'); }
+      } else {
+        co.textContent = '–'; co.classList.add('empty');
+        ce.textContent = '–'; ce.classList.add('empty');
+        an.textContent = '–'; an.classList.add('empty');
+      }
+    });
+
+    const names = Object.keys(cost);
+    renderRanking('ranking-cost', names.map(function(n){return [n,cost[n]];}), '$', annual);
+    renderRanking('ranking-carbon', names.map(function(n){return [n,EM[n]];}), 'kg', null);
+    renderInsight(cost, annual);
+  }
+
+  function renderRanking(containerId, entries, prefix, annual) {
+    const container = document.getElementById(containerId);
+    if (entries.length === 0) { container.innerHTML = '<p class="empty-msg">Enter at least one price to compare.</p>'; return; }
+    entries.sort(function(a,b){ return a[1]-b[1]; });
+    const max = Math.max.apply(null, entries.map(function(e){return e[1];}));
+    container.innerHTML = entries.map(function(e){
+      const pct = (e[1]/max)*100;
+      let label = prefix==='$' ? '$'+e[1].toFixed(2) : e[1].toFixed(0);
+      if (prefix==='$' && !isNaN(annual) && annual>0) {
+        label = '$'+Math.round(e[1]*annual).toLocaleString()+'/yr';
+      }
+      return '<div class="rank-bar-row"><span class="rank-name">'+e[0]+'</span>'+
+        '<div class="rank-track"><div class="rank-fill" style="width:'+pct+'%;background:'+COLORS[e[0]]+';"></div></div>'+
+        '<span class="rank-value">'+label+'</span></div>';
+    }).join('');
+  }
+
+  function renderInsight(cost, annual) {
+    const box = document.getElementById('insight');
+    const txt = document.getElementById('insight-text');
+    const names = Object.keys(cost);
+    if (names.length < 2) { box.classList.remove('show'); return; }
+    let cheap = names[0], dear = names[0];
+    names.forEach(function(n){ if (cost[n]<cost[cheap]) cheap=n; if (cost[n]>cost[dear]) dear=n; });
+    let clean = names[0]; names.forEach(function(n){ if (EM[n]<EM[clean]) clean=n; });
+    const ratio = (cost[dear]/cost[cheap]);
+    let msg = '<strong>'+cheap+'</strong> is your cheapest energy at <strong>$'+cost[cheap].toFixed(2)+'/GJ</strong>, about <strong>'+ratio.toFixed(1)+'×</strong> cheaper than '+dear+' at $'+cost[dear].toFixed(2)+'/GJ.';
+    if (clean !== cheap) {
+      msg += ' But <strong>'+clean+'</strong> is the lowest-emission option at '+EM[clean].toFixed(0)+' kg CO₂-e/GJ, worth weighing against cost.';
+    } else {
+      msg += ' It\u2019s also the lowest-emission option here, at '+EM[clean].toFixed(0)+' kg CO₂-e/GJ.';
+    }
+    if (!isNaN(annual) && annual>0) {
+      const saving = (cost[dear]-cost[cheap]) * annual;
+      msg += ' At '+annual.toLocaleString()+' GJ/year, choosing '+cheap+' over '+dear+' would save roughly <strong>$'+Math.round(saving).toLocaleString()+'</strong> a year.';
+    }
+    txt.innerHTML = msg;
+    box.classList.add('show');
+  }
+
+  function recalcCarbon() {
+    const elec = parseFloat(document.getElementById('c-elec').value);
+    const gas  = parseFloat(document.getElementById('c-gas').value);
+    const dies = parseFloat(document.getElementById('c-diesel').value);
+    const lpg  = parseFloat(document.getElementById('c-lpg').value);
+    const eElec = (!isNaN(elec)&&elec>0) ? elec*0.68/1000 : 0;
+    const eGas  = (!isNaN(gas)&&gas>0)   ? gas*51.4/1000 : 0;
+    const eDies = (!isNaN(dies)&&dies>0) ? dies*2.71/1000 : 0;
+    const eLpg  = (!isNaN(lpg)&&lpg>0)   ? lpg*1.55/1000 : 0;
+    setCE('ce-elec', eElec, !isNaN(elec)&&elec>0);
+    setCE('ce-gas', eGas, !isNaN(gas)&&gas>0);
+    setCE('ce-diesel', eDies, !isNaN(dies)&&dies>0);
+    setCE('ce-lpg', eLpg, !isNaN(lpg)&&lpg>0);
+    const total = eElec+eGas+eDies+eLpg;
+    document.getElementById('carbon-total-val').textContent = total.toFixed(1) + ' t CO₂-e';
+    const ctx = document.getElementById('carbon-total-context');
+    if (total > 0) {
+      const cars = Math.round(total/4.6);
+      ctx.innerHTML = ' &nbsp;·&nbsp; roughly equivalent to ' + cars.toLocaleString() + ' average passenger cars for a year';
+    } else { ctx.textContent = ''; }
+  }
+  function setCE(id, val, show) {
+    const el = document.getElementById(id);
+    if (show) { el.textContent = val.toFixed(1); el.classList.remove('empty'); }
+    else { el.textContent = '–'; el.classList.add('empty'); }
+  }
+
+  // ─── Unit converter ───
+  function recalcConv() {
+    const val = parseFloat(document.getElementById('conv-val').value);
+    const factor = parseFloat(document.getElementById('conv-unit').value); // MJ per unit
+    const container = document.getElementById('conv-results');
+    if (isNaN(val)) { container.innerHTML = '<p class="empty-msg" style="padding:8px;">Enter a value above to convert.</p>'; return; }
+    const mj = val * factor;
+    const units = [
+      ['Megajoules (MJ)', mj, 2],
+      ['Gigajoules (GJ)', mj/1000, 4],
+      ['Kilowatt-hours (kWh)', mj/3.6, 2],
+      ['Megawatt-hours (MWh)', mj/3600, 4],
+      ['Therms', mj/105.5, 3],
+      ['MMBtu', mj/1055.06, 4],
+      ['BTU', mj/0.00105506, 0],
+      ['Kilocalories (kcal)', mj/0.004184, 0]
+    ];
+    container.innerHTML = units.map(function(u){
+      return '<div class="fuel-row" style="grid-template-columns:1.5fr 1fr;">'+
+        '<div class="fuel-row-label"><span class="fuel-name">'+u[0]+'</span></div>'+
+        '<div class="fuel-result"><span class="fuel-result-value">'+u[1].toLocaleString(undefined,{maximumFractionDigits:u[2]})+'</span></div>'+
+        '</div>';
+    }).join('');
+  }
+
+  // ─── Steam calculator ───
+  function recalcSteam() {
+    const tph = parseFloat(document.getElementById('steam-tph').value);
+    const eff = parseFloat(document.getElementById('steam-eff').value);
+    const hrs = parseFloat(document.getElementById('steam-hrs').value);
+    const price = parseFloat(document.getElementById('steam-price').value);
+    const box = document.getElementById('steam-text');
+    if (isNaN(tph) || tph<=0) { box.textContent = 'Enter your steam output to calculate.'; return; }
+    const effFrac = (!isNaN(eff) && eff>0) ? eff/100 : 0.82;
+    const gjPerTonne = 2.34;
+    const outputGJh = tph * gjPerTonne;          // GJ/hr of steam energy
+    const fuelGJh = outputGJh / effFrac;          // GJ/hr of fuel input
+    let msg = 'At <strong>'+tph+' t/hr</strong> and <strong>'+(effFrac*100).toFixed(0)+'%</strong> efficiency, you need roughly <strong>'+fuelGJh.toFixed(1)+' GJ/hr</strong> of fuel input ('+outputGJh.toFixed(1)+' GJ/hr delivered to steam).';
+    if (!isNaN(hrs) && hrs>0) {
+      const annualGJ = fuelGJh * hrs;
+      msg += ' Over <strong>'+hrs.toLocaleString()+' hrs/year</strong> that\u2019s about <strong>'+Math.round(annualGJ).toLocaleString()+' GJ/year</strong>.';
+      if (!isNaN(price) && price>0) {
+        const annualCost = annualGJ * price;
+        msg += ' At $'+price+'/GJ, fuel cost ≈ <strong>$'+Math.round(annualCost).toLocaleString()+'/year</strong>.';
+      }
+    }
+    box.innerHTML = msg;
+  }
+
+  // ─── Solar estimator ───
+  function recalcSolar() {
+    const kw = parseFloat(document.getElementById('solar-kw').value);
+    const yld = parseFloat(document.getElementById('solar-state').value); // kWh/kW/yr
+    const price = parseFloat(document.getElementById('solar-price').value);
+    const cost = parseFloat(document.getElementById('solar-cost').value);
+    const box = document.getElementById('solar-text');
+    if (isNaN(kw) || kw<=0 || isNaN(price) || price<=0) { box.textContent = 'Enter system size and electricity price to calculate.'; return; }
+    const annualKwh = kw * yld;
+    const offset = 0.8; // share of generation offsetting grid use
+    const saving = annualKwh * offset * (price/100);
+    let msg = 'A <strong>'+kw+' kW</strong> system would generate roughly <strong>'+Math.round(annualKwh).toLocaleString()+' kWh/year</strong>, saving about <strong>$'+Math.round(saving).toLocaleString()+'/year</strong> on electricity (assuming 80% self-consumption).';
+    const co2 = annualKwh * offset * 0.68 / 1000;
+    msg += ' That avoids roughly <strong>'+co2.toFixed(1)+' t CO₂-e</strong> a year.';
+    if (!isNaN(cost) && cost>0 && saving>0) {
+      const payback = cost / saving;
+      msg += ' At an install cost of $'+Math.round(cost).toLocaleString()+', simple payback is about <strong>'+payback.toFixed(1)+' years</strong>.';
+    }
+    box.innerHTML = msg;
+  }
+
+  // Initialise converter on load
+  recalcConv();
+
+  // ─── Payback calculator ───
+  function recalcPayback() {
+    const cost = parseFloat(document.getElementById('pb-cost').value);
+    const saving = parseFloat(document.getElementById('pb-saving').value);
+    const life = parseFloat(document.getElementById('pb-life').value);
+    const box = document.getElementById('pb-text');
+    if (isNaN(cost) || cost<=0 || isNaN(saving) || saving<=0) { box.textContent = 'Enter a cost and annual saving to calculate.'; return; }
+    const payback = cost / saving;
+    const roi = (saving / cost) * 100;
+    let msg = 'Simple payback is about <strong>'+payback.toFixed(1)+' years</strong>, an annual return on investment of <strong>'+roi.toFixed(0)+'%</strong>.';
+    if (!isNaN(life) && life>0) {
+      const net = (saving * life) - cost;
+      msg += ' Over a <strong>'+life+'-year</strong> life, total net saving after recovering the cost is roughly <strong>$'+Math.round(net).toLocaleString()+'</strong>.';
+    }
+    box.innerHTML = msg;
+  }
+</script>
+
+<!-- CTA -->
+<section class="cta-strip">
+  <h2>Need a deeper <span>analysis?</span></h2>
+  <p>Our custom reports go beyond the calculators, benchmarking your costs, modelling fuel switches, and mapping your carbon obligations with practical tactics to reduce both.</p>
+  <a href="/contact" class="cta-strip-btn">Get a custom report →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <div class="footer-logo">
+      <div class="footer-badge">
+        <svg viewBox="0 0 120 120" width="100%" height="100%" style="display:block;">
+          <rect x="24" y="48" width="12" height="37" rx="2.5" fill="#2E6DA4"/>
+          <rect x="39" y="24" width="12" height="61" rx="2.5" fill="#34C77B"/>
+          <rect x="54" y="38" width="12" height="47" rx="2.5" fill="#3B9EFF"/>
+          <rect x="69" y="60" width="12" height="25" rx="2.5" fill="#2E6DA4"/>
+          <rect x="84" y="44" width="12" height="41" rx="2.5" fill="#3B9EFF"/>
+          <rect x="18" y="88" width="84" height="7" rx="3.5" fill="#3B9EFF"/>
+        </svg>
+      </div>
+      <span class="footer-wordmark"><span class="wm-name">Energy<span>Desk</span></span><span class="wm-au">Australia</span></span>
+    </div>
+    <p class="footer-tagline">Independent energy, fuel and carbon intelligence, helping Australian businesses cut costs, reduce emissions and navigate policy.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Markets</h4>
+    <ul><li><a href="/markets">Electricity</a></li><li><a href="/markets">Gas & LPG</a></li><li><a href="/markets">Diesel & Coal</a></li><li><a href="/markets">Carbon</a></li></ul>
+  </div>
+  <div class="footer-col">
+    <h4>Insights</h4>
+    <ul><li><a href="/insights">Latest Articles</a></li><li><a href="/insights">White Papers</a></li><li><a href="/insights">Newsletter</a></li></ul>
+  </div>
+  <div class="footer-col">
+    <h4>Tools & Services</h4>
+    <ul><li><a href="/tools">Calculators</a></li><li><a href="/services">Custom Reports</a></li><li><a href="/services">Training</a></li><li><a href="/contact">Contact</a></li></ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <p>© 2026 EnergyDesk Australia · energydesk.com.au</p>
+  <p>Privacy Policy · Terms of Use</p>
+</div>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.hamburger').classList.toggle('active');
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  document.querySelectorAll('.mobile-menu a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.querySelector('.hamburger').classList.remove('active');
+      document.getElementById('mobileMenu').classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>

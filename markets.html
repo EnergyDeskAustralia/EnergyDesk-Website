@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+<!-- Primary SEO -->
+<title>Energy Market Prices Australia | Electricity, Gas, Fuel & Carbon | EnergyDesk</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20120%20120%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20rx%3D%2224%22%20fill%3D%22%230A2440%22/%3E%3Crect%20x%3D%2224%22%20y%3D%2248%22%20width%3D%2212%22%20height%3D%2237%22%20rx%3D%222.5%22%20fill%3D%22%232E6DA4%22/%3E%3Crect%20x%3D%2239%22%20y%3D%2224%22%20width%3D%2212%22%20height%3D%2261%22%20rx%3D%222.5%22%20fill%3D%22%2334C77B%22/%3E%3Crect%20x%3D%2254%22%20y%3D%2238%22%20width%3D%2212%22%20height%3D%2247%22%20rx%3D%222.5%22%20fill%3D%22%233B9EFF%22/%3E%3Crect%20x%3D%2269%22%20y%3D%2260%22%20width%3D%2212%22%20height%3D%2225%22%20rx%3D%222.5%22%20fill%3D%22%232E6DA4%22/%3E%3Crect%20x%3D%2284%22%20y%3D%2244%22%20width%3D%2212%22%20height%3D%2241%22%20rx%3D%222.5%22%20fill%3D%22%233B9EFF%22/%3E%3Crect%20x%3D%2218%22%20y%3D%2288%22%20width%3D%2284%22%20height%3D%227%22%20rx%3D%223.5%22%20fill%3D%22%233B9EFF%22/%3E%3C/svg%3E">
+<meta name="description" content="Live Australian energy market pricing, NEM electricity spot prices by region, gas hub prices, diesel, LPG, coal and carbon. Compare costs on a $/GJ basis.">
+<meta name="keywords" content="NEM spot price, electricity prices Australia, gas prices STTM, diesel price, LPG price, coal price, carbon price, energy market data, $/GJ comparison">
+<meta name="author" content="EnergyDesk Australia">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://energydesk.com.au/markets">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EnergyDesk Australia">
+<meta property="og:title" content="Energy Market Prices Australia | Electricity, Gas, Fuel & Carbon | EnergyDesk">
+<meta property="og:description" content="Live Australian energy market pricing, NEM electricity spot prices by region, gas hub prices, diesel, LPG, coal and carbon. Compare costs on a $/GJ basis.">
+<meta property="og:url" content="https://energydesk.com.au/markets">
+<meta property="og:locale" content="en_AU">
+<meta property="og:image" content="https://energydesk.com.au/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="EnergyDesk Australia">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Energy Market Prices Australia | Electricity, Gas, Fuel & Carbon | EnergyDesk">
+<meta name="twitter:description" content="Live Australian energy market pricing, NEM electricity spot prices by region, gas hub prices, diesel, LPG, coal and carbon. Compare costs on a $/GJ basis.">
+<meta name="twitter:image" content="https://energydesk.com.au/og-image.png">
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Australian Energy, Fuel & Carbon Market Prices",
+  "description": "Current pricing for electricity (NEM regions), gas (STTM hubs), diesel, LPG, coal and carbon across Australia, with $/GJ comparisons.",
+  "creator": { "@type": "Organization", "name": "EnergyDesk Australia", "url": "https://energydesk.com.au/" },
+  "spatialCoverage": { "@type": "Place", "name": "Australia" },
+  "keywords": ["electricity prices", "gas prices", "diesel", "LPG", "coal", "carbon price", "NEM", "STTM"],
+  "inLanguage": "en-AU"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root { color-scheme: light only; }
+  html { background: #ffffff; }
+
+  :root {
+    --navy:   #0A2440;
+    --blue:   #2E6DA4;
+    --sky:    #3B9EFF;
+    --green:  #34C77B;
+    --amber:  #F59E42;
+    --light:  #F4F7FB;
+    --mid:    #E2E8F2;
+    --text:   #1A2A3A;
+    --muted:  #6A7A8A;
+    --white:  #ffffff;
+  }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+  }
+
+  section { background: var(--white); }
+
+  /* ── NAV (shared with homepage) ── */
+  nav { background: var(--navy); position: sticky; top: 0; z-index: 100; }
+
+  .nav-top {
+    padding: 0 48px; height: 70px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid #0F2A44;
+  }
+
+  .nav-logo { display: flex; align-items: center; gap: 12px; }
+
+  .nav-badge { width:50px; height:50px; border-radius:10px; background:var(--navy); border:1.5px solid #1E3A5F; overflow:hidden; }
+
+  .nav-badge-bars { display: flex; align-items: flex-end; gap: 2px; height: 14px; }
+  .nav-bar { width: 3.5px; border-radius: 1px 1px 0 0; }
+
+  .nav-badge-nrg {
+    font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; font-weight: 500;
+    color: #fff; letter-spacing: 0.1em; line-height: 1;
+  }
+  .nav-badge-desk {
+    font-family: 'IBM Plex Mono', monospace; font-size: 6.5px; font-weight: 400;
+    color: var(--sky); letter-spacing: 0.14em; line-height: 1;
+  }
+
+  .nav-wordmark { display:inline-flex; flex-direction:column; line-height:1; }
+  .nav-wordmark .wm-name { font-size: 30px; font-weight: 600; color: #fff; letter-spacing: -0.01em; }
+  .nav-wordmark .wm-name span { font-weight: 300; color: var(--sky); }
+  .nav-wordmark .wm-au { font-size:12px; font-weight:400; letter-spacing:0.34em; text-transform:uppercase; color:#3A5A7A; margin-top:4px; margin-left:0.17em; }
+
+  .nav-ticker { display: flex; align-items: center; gap: 20px; }
+
+  .ticker-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase; color: #2E4A6A; margin-right: 4px;
+  }
+  .ticker-item { display: flex; align-items: center; gap: 5px; }
+  .ticker-state {
+    font-family: 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 500;
+    color: #4A6A8A; letter-spacing: 0.1em;
+  }
+  .ticker-price {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.04em;
+  }
+  .ticker-price.up   { color: var(--amber); }
+  .ticker-price.down { color: var(--green); }
+  .ticker-price.mid  { color: #8AABCC; }
+  .ticker-arrow { font-size: 8px; }
+  .ticker-arrow.up   { color: var(--amber); }
+  .ticker-arrow.down { color: var(--green); }
+  .ticker-divider { width: 1px; height: 12px; background: #0F2A44; }
+  .ticker-updated {
+    font-family: 'IBM Plex Mono', monospace; font-size: 8px; color: #2A4060; letter-spacing: 0.08em;
+  }
+
+  .nav-bottom {
+    padding: 0 48px; height: 48px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-links { display: flex; gap: 0; list-style: none; height: 100%; }
+  .nav-links li { height: 100%; display: flex; align-items: center; }
+  .nav-links a {
+    font-size: 12.5px; font-weight: 500; color: #6A8AAA; text-decoration: none;
+    letter-spacing: 0.04em; padding: 0 18px; height: 100%;
+    display: flex; align-items: center; border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .nav-links a:hover { color: #fff; border-bottom-color: var(--sky); }
+  .nav-links a.active { color: #fff; border-bottom-color: var(--sky); }
+
+  .nav-cta {
+    background: var(--sky); color: #fff !important; padding: 7px 16px !important;
+    border-radius: 6px; font-weight: 600 !important; height: auto !important;
+    border-bottom: none !important; font-size: 12px !important;
+    display: flex !important; flex-direction: column; align-items: center;
+    line-height: 1.1; text-align: center;
+  }
+  .cta-small { font-size: 12px; font-weight: 600; letter-spacing: 0.02em; }
+
+  /* ── PAGE HEADER ── */
+  .page-head {
+    background: var(--navy);
+    padding: 56px 48px 48px;
+  }
+  .page-head-eyebrow {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--green); margin-bottom: 14px;
+  }
+  .page-head-title {
+    font-size: 38px; font-weight: 700; color: #fff; letter-spacing: -0.02em;
+    line-height: 1.1; margin-bottom: 16px;
+  }
+  .page-head-title span { font-weight: 300; color: var(--sky); }
+  .page-head-sub {
+    font-size: 15px; font-weight: 300; color: #8AABCC; line-height: 1.7; max-width: 620px;
+  }
+
+  /* ── CONTROLS BAR ── */
+  .controls {
+    background: #0D1E33;
+    padding: 16px 48px;
+    display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+    border-bottom: 1px solid #1E3A5F;
+    position: sticky; top: 110px; z-index: 90;
+  }
+  .control-group { display: flex; align-items: center; gap: 10px; }
+  .control-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase; color: #4A6A8A;
+  }
+  .toggle-group { display: flex; background: var(--navy); border-radius: 7px; padding: 3px; border: 1px solid #1E3A5F; }
+  .toggle-btn {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500;
+    color: #6A8AAA; background: transparent; border: none; cursor: pointer;
+    padding: 6px 14px; border-radius: 5px; transition: all 0.2s; letter-spacing: 0.04em;
+  }
+  .toggle-btn.active { background: var(--sky); color: #fff; }
+  .control-note {
+    margin-left: auto;
+    font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #3A5A7A; letter-spacing: 0.06em;
+  }
+  .control-note a { color: var(--sky); text-decoration: none; }
+
+  /* ── PRICE TILES ── */
+  .tiles-section { background: var(--navy); padding: 8px 48px 56px; }
+  .tiles-grid {
+    display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px;
+  }
+  .tile {
+    background: #0D1E33; border: 1px solid #1E3A5F; border-radius: 10px;
+    padding: 20px; position: relative; overflow: hidden;
+  }
+  .tile::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--sky), var(--green));
+  }
+  .tile-fuel {
+    font-family: 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase; color: #6A8AAA; margin-bottom: 12px;
+  }
+  .tile-price { font-size: 23px; font-weight: 700; color: #fff; letter-spacing: -0.01em; line-height: 1; }
+  .tile-price span { font-size: 12px; font-weight: 400; color: #4A6A8A; }
+  .tile-meta { display: flex; align-items: center; gap: 6px; margin-top: 8px; }
+  .tile-change { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 500; }
+  .tile-change.up { color: var(--amber); }
+  .tile-change.down { color: var(--green); }
+  .tile-unit { font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; color: #3A5A7A; }
+
+  /* ── DATA TABLES ── */
+  .tables-section { padding: 64px 48px; background: var(--light); }
+  .table-block { margin-bottom: 48px; }
+  .table-block:last-child { margin-bottom: 0; }
+
+  .table-head {
+    display: flex; align-items: baseline; gap: 12px; margin-bottom: 4px;
+  }
+  .table-title { font-size: 20px; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; }
+  .table-badge {
+    font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--sky);
+    background: #E8F2FF; padding: 3px 8px; border-radius: 4px;
+  }
+  .table-sub { font-size: 13px; font-weight: 300; color: var(--muted); margin-bottom: 18px; }
+
+  .data-table {
+    width: 100%; border-collapse: collapse; background: #fff;
+    border: 1px solid var(--mid); border-radius: 10px; overflow: hidden;
+    font-size: 13px;
+  }
+  .data-table thead { background: var(--navy); }
+  .data-table th {
+    font-family: 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase; color: #8AABCC;
+    text-align: right; padding: 14px 16px;
+  }
+  .data-table th:first-child { text-align: left; }
+  .data-table td {
+    padding: 13px 16px; text-align: right; color: var(--text);
+    border-bottom: 1px solid var(--mid); font-variant-numeric: tabular-nums;
+  }
+  .data-table td:first-child { text-align: left; font-weight: 500; color: var(--navy); }
+  .data-table tbody tr:last-child td { border-bottom: none; }
+  .data-table tbody tr:hover { background: var(--light); }
+
+  .cell-region {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.04em;
+  }
+  .chg { font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; }
+  .chg.up { color: #C2700E; }
+  .chg.down { color: #1A8A52; }
+  .gj { font-weight: 600; color: var(--navy); }
+
+  /* ── CTA STRIP ── */
+  .cta-strip {
+    background: var(--navy); padding: 56px 48px; text-align: center;
+  }
+  .cta-strip h2 { font-size: 26px; font-weight: 700; color: #fff; letter-spacing: -0.01em; margin-bottom: 12px; }
+  .cta-strip h2 span { color: var(--sky); font-weight: 300; }
+  .cta-strip p { font-size: 14px; font-weight: 300; color: #8AABCC; max-width: 520px; margin: 0 auto 28px; line-height: 1.7; }
+  .cta-strip-btn {
+    display: inline-block; background: var(--sky); color: #fff; text-decoration: none;
+    padding: 14px 30px; border-radius: 8px; font-size: 14px; font-weight: 600;
+  }
+
+  /* ── FOOTER (shared) ── */
+  footer {
+    background: #060E1A; padding: 48px;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+  }
+  .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+  .footer-badge { width:36px; height:36px; background:var(--navy); border:1.5px solid #1E3A5F; border-radius:7px; overflow:hidden; }
+  .footer-badge-bars { display: flex; align-items: flex-end; gap: 2px; height: 10px; }
+  .footer-bar { width: 3px; border-radius: 1px 1px 0 0; }
+  .footer-nrg { font-family: 'IBM Plex Mono', monospace; font-size: 7px; font-weight: 500; color: #fff; letter-spacing: 0.08em; }
+  .footer-desk { font-family: 'IBM Plex Mono', monospace; font-size: 5px; color: var(--sky); letter-spacing: 0.12em; }
+  .footer-wordmark { display:inline-flex; flex-direction:column; line-height:1; }
+  .footer-wordmark .wm-name { font-size: 15px; font-weight: 600; color: #fff; }
+  .footer-wordmark .wm-name span { font-weight: 300; color: var(--sky); }
+  .footer-wordmark .wm-au { font-size:8px; font-weight:400; letter-spacing:0.3em; text-transform:uppercase; color:#3A5A7A; margin-top:4px; margin-left:0.15em; }
+  .footer-tagline { font-size: 12px; font-weight: 300; color: #3A5A7A; line-height: 1.6; max-width: 280px; }
+  .footer-col h4 {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: #3A5A7A; margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul li a { font-size: 13px; font-weight: 300; color: #5A7A9A; text-decoration: none; }
+  .footer-col ul li a:hover { color: #fff; }
+  .footer-bottom {
+    background: #040A12; padding: 20px 48px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-bottom p { font-size: 11px; color: #2A4A6A; font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.06em; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .mobile-ticker { display: none; }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    /* FIXED-NAV-MOBILE: keep nav pinned while scrolling */
+    nav { position: fixed !important; top: 0; left: 0; right: 0; width: 100%; }
+    body { padding-top: 60px; }
+    /* MOBILE-MENU-FIXED: dropdown pinned below fixed nav */
+    .mobile-menu.open { position: fixed; top: 60px; left: 0; right: 0; z-index: 99; max-height: calc(100vh - 60px); overflow-y: auto; }
+
+    .nav-bottom { display:none !important; }
+    .nav-links { display:none !important; }
+    .hamburger { display:flex !important; }
+
+    .nav-top { padding: 0 20px; height: 60px; }
+    .nav-badge { width: 40px; height: 40px; border-radius: 8px; padding: 5px 4px 4px; }
+    .nav-badge-bars { height: 11px; }
+    .nav-bar { width: 3px; }
+    .nav-badge-nrg { font-size: 7px; }
+    .nav-badge-desk { font-size: 5.5px; }
+    .nav-wordmark .wm-name { font-size: 21px; } .nav-wordmark .wm-au { font-size:9px; letter-spacing:0.3em; margin-top:3px; margin-left:0.15em; }
+    .nav-ticker { display: none; }
+    .nav-bottom { padding: 0 16px; gap: 8px; }
+    .nav-links { overflow-x: auto; -webkit-overflow-scrolling: touch; flex: 1; }
+    .nav-links a { font-size: 11.5px; padding: 0 12px; }
+    .nav-cta { font-size: 11px !important; padding: 6px 12px !important; white-space: nowrap; }
+
+    .mobile-ticker {
+      display: flex; background: #060E1A; border-bottom: 1px solid #0F2A44;
+      padding: 7px 0; align-items: center; gap: 16px; overflow: hidden;
+      white-space: nowrap; position: relative;
+    }
+    .mobile-ticker-track {
+      display: flex; align-items: center; gap: 16px;
+      animation: ticker-scroll 22s linear infinite; padding-left: 16px;
+    }
+
+    .page-head { padding: 40px 20px 32px; }
+    .page-head-title { font-size: 28px; }
+
+    .controls { padding: 14px 20px; gap: 16px; position: static; }
+    .control-note { margin-left: 0; width: 100%; }
+
+    .tiles-section { padding: 8px 20px 40px; }
+    .tiles-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    .tables-section { padding: 40px 20px; }
+    .table-block { margin-bottom: 36px; }
+
+    /* Tables scroll horizontally on mobile */
+    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 10px; }
+    .data-table { min-width: 560px; }
+
+    .cta-strip { padding: 40px 20px; }
+    .cta-strip h2 { font-size: 22px; }
+
+    footer { grid-template-columns: 1fr 1fr; padding: 40px 20px; gap: 32px; }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-bottom { padding: 16px 20px; flex-direction: column; gap: 6px; text-align: center; }
+  }
+
+  @media (max-width: 480px) {
+    .nav-links a { font-size: 11px; padding: 0 10px; }
+    .page-head-title { font-size: 24px; }
+    .tiles-grid { grid-template-columns: 1fr 1fr; }
+    footer { grid-template-columns: 1fr; }
+  }
+
+  /* ── TABLET ── */
+  @media (min-width: 769px) and (max-width: 1080px) {
+    .nav-top { padding: 0 24px; }
+    .nav-bottom { padding: 0 24px; }
+    .ticker-label { display: none; }
+    .nav-ticker { gap: 12px; }
+    .ticker-updated { display: none; }
+    .page-head { padding: 48px 24px 40px; }
+    .controls { padding: 16px 24px; }
+    .tiles-section { padding: 8px 24px 48px; }
+    .tiles-grid { grid-template-columns: repeat(3, 1fr); }
+    .tables-section { padding: 48px 24px; }
+    .cta-strip { padding: 48px 24px; }
+  }
+
+  /* Hamburger + mobile menu */
+  .hamburger { display:none; flex-direction:column; justify-content:center; gap:5px; background:none; border:none; cursor:pointer; padding:8px; margin-left:auto; }
+  .hamburger span { display:block; width:24px; height:2.5px; background:#fff; border-radius:2px; transition:transform 0.25s, opacity 0.25s; }
+  .hamburger.active span:nth-child(1) { transform:translateY(7.5px) rotate(45deg); }
+  .hamburger.active span:nth-child(2) { opacity:0; }
+  .hamburger.active span:nth-child(3) { transform:translateY(-7.5px) rotate(-45deg); }
+  .mobile-menu { display:none; flex-direction:column; background:#0D1E33; border-top:1px solid #1E3A5F; }
+  .mobile-menu.open { display:flex; }
+  .mobile-menu a { color:#C0D4E8; text-decoration:none; font-size:15px; font-weight:500; padding:16px 24px; border-bottom:1px solid #16304E; }
+  .mobile-menu a:active, .mobile-menu a:hover { background:#143052; color:#fff; }
+  .mobile-menu .mobile-menu-cta { background:var(--sky); color:#fff; font-weight:600; text-align:center; border-bottom:none; margin:12px 16px 4px; border-radius:6px; }
+
+
+  /* Force intended light rendering even if device requests dark mode */
+  @media (prefers-color-scheme: dark) {
+    html, body { background:#ffffff !important; color:#1A2A3A !important; }
+    .about-section, .principles-section, .contact-section, .featured-section,
+    .hp-section, .bp-section, section { background:#ffffff; }
+    .about-section { background:#ffffff !important; }
+    .principles-section, .bp-section-alt { background:#F4F7FB !important; }
+    .about-text p, .about-h2, .contact-h2, .bp-card h3, .hp-card h3,
+    .principle-block h3, .form-row label { color:#1A2A3A !important; }
+    .about-aside, .contact-card, .bp-card, .hp-card, .principle-block { background:#F4F7FB !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-top">
+    <div class="nav-logo">
+      <div class="nav-badge">
+        <svg viewBox="0 0 120 120" width="100%" height="100%" style="display:block;">
+          <rect x="24" y="48" width="12" height="37" rx="2.5" fill="#2E6DA4"/>
+          <rect x="39" y="24" width="12" height="61" rx="2.5" fill="#34C77B"/>
+          <rect x="54" y="38" width="12" height="47" rx="2.5" fill="#3B9EFF"/>
+          <rect x="69" y="60" width="12" height="25" rx="2.5" fill="#2E6DA4"/>
+          <rect x="84" y="44" width="12" height="41" rx="2.5" fill="#3B9EFF"/>
+          <rect x="18" y="88" width="84" height="7" rx="3.5" fill="#3B9EFF"/>
+        </svg>
+      </div>
+      <span class="nav-wordmark"><span class="wm-name">Energy<span>Desk</span></span><span class="wm-au">Australia</span></span>
+    </div>
+    <div class="nav-ticker">
+      <span class="ticker-label">NEM Spot $/MWh</span>
+      <div class="ticker-item"><span class="ticker-state">NSW</span><span class="ticker-price up" id="nsw-price">$94.20</span><span class="ticker-arrow up">▲</span></div>
+      <div class="ticker-divider"></div>
+      <div class="ticker-item"><span class="ticker-state">VIC</span><span class="ticker-price down" id="vic-price">$82.50</span><span class="ticker-arrow down">▼</span></div>
+      <div class="ticker-divider"></div>
+      <div class="ticker-item"><span class="ticker-state">QLD</span><span class="ticker-price up" id="qld-price">$108.75</span><span class="ticker-arrow up">▲</span></div>
+      <div class="ticker-divider"></div>
+      <div class="ticker-item"><span class="ticker-state">SA</span><span class="ticker-price mid" id="sa-price">$77.30</span><span class="ticker-arrow down">▼</span></div>
+      <div class="ticker-divider"></div>
+      <div class="ticker-item"><span class="ticker-state">TAS</span><span class="ticker-price down" id="tas-price">$68.90</span><span class="ticker-arrow down">▼</span></div>
+      <div class="ticker-divider"></div>
+      <span class="ticker-updated" id="ticker-time">5-min dispatch · updating</span>
+    </div>
+  <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+  <div class="nav-bottom">
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="#" class="active">Markets</a></li>
+      <li><a href="/insights">Insights</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <a href="/services" class="nav-cta"><span class="cta-small">Get a</span>Report</a>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="/">Home</a>
+    <a href="/markets">Markets</a>
+    <a href="/insights">Insights</a>
+    <a href="/tools">Tools</a>
+    <a href="/services">Services</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/services" class="mobile-menu-cta">Get a Report →</a>
+</div>
+
+<script>
+  (function() {
+    const prices = { nsw: 94.20, vic: 82.50, qld: 108.75, sa: 77.30, tas: 68.90 };
+    const states = ['nsw', 'vic', 'qld', 'sa', 'tas'];
+    function updateTicker() {
+      states.forEach(function(state) {
+        const el = document.getElementById(state + '-price');
+        if (!el) return;
+        const arrow = el.nextElementSibling;
+        const change = (Math.random() - 0.48) * 8;
+        prices[state] = Math.max(10, prices[state] + change);
+        const prev = parseFloat(el.textContent.replace('$',''));
+        el.textContent = '$' + prices[state].toFixed(2);
+        const dir = prices[state] >= prev ? 'up' : 'down';
+        el.className = 'ticker-price ' + dir;
+        if (arrow) { arrow.className = 'ticker-arrow ' + dir; arrow.textContent = dir === 'up' ? '▲' : '▼'; }
+      });
+      const t = document.getElementById('ticker-time');
+      if (t) { const now = new Date(); t.textContent = '5-min dispatch · ' + now.toLocaleTimeString('en-AU', {hour:'2-digit', minute:'2-digit', second:'2-digit'}); }
+    }
+    setInterval(updateTicker, 5000);
+    updateTicker();
+  })();
+</script>
+
+<!-- MOBILE TICKER -->
+<div class="mobile-ticker">
+  <div class="mobile-ticker-track">
+    <span class="ticker-label">NEM Spot $/MWh</span>
+    <div class="ticker-item"><span class="ticker-state">NSW</span><span class="ticker-price up">$94.20</span><span class="ticker-arrow up">▲</span></div>
+    <div class="ticker-divider"></div>
+    <div class="ticker-item"><span class="ticker-state">VIC</span><span class="ticker-price down">$82.50</span><span class="ticker-arrow down">▼</span></div>
+    <div class="ticker-divider"></div>
+    <div class="ticker-item"><span class="ticker-state">QLD</span><span class="ticker-price up">$108.75</span><span class="ticker-arrow up">▲</span></div>
+    <div class="ticker-divider"></div>
+    <div class="ticker-item"><span class="ticker-state">SA</span><span class="ticker-price mid">$77.30</span><span class="ticker-arrow down">▼</span></div>
+    <div class="ticker-divider"></div>
+    <div class="ticker-item"><span class="ticker-state">TAS</span><span class="ticker-price down">$68.90</span><span class="ticker-arrow down">▼</span></div>
+    <div class="ticker-divider"></div>
+    <span class="ticker-label">NEM Spot $/MWh</span>
+    <div class="ticker-item"><span class="ticker-state">NSW</span><span class="ticker-price up">$94.20</span><span class="ticker-arrow up">▲</span></div>
+    <div class="ticker-divider"></div>
+    <div class="ticker-item"><span class="ticker-state">VIC</span><span class="ticker-price down">$82.50</span><span class="ticker-arrow down">▼</span></div>
+    <div class="ticker-divider"></div>
+    <div class="ticker-item"><span class="ticker-state">QLD</span><span class="ticker-price up">$108.75</span><span class="ticker-arrow up">▲</span></div>
+    <div class="ticker-divider"></div>
+    <div class="ticker-item"><span class="ticker-state">SA</span><span class="ticker-price mid">$77.30</span><span class="ticker-arrow down">▼</span></div>
+    <div class="ticker-divider"></div>
+    <div class="ticker-item"><span class="ticker-state">TAS</span><span class="ticker-price down">$68.90</span><span class="ticker-arrow down">▼</span></div>
+    <div class="ticker-divider"></div>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<section class="page-head">
+  <p class="page-head-eyebrow">Markets</p>
+  <h1 class="page-head-title">Energy, fuel & carbon <span>prices across Australia</span></h1>
+  <p class="page-head-sub">Live and historical pricing for electricity, natural gas, diesel, LPG, coal and carbon, tracked by region and convertible to a common $/GJ basis so you can compare every fuel on equal terms.</p>
+</section>
+
+<!-- CONTROLS -->
+<div class="controls">
+  <div class="control-group">
+    <span class="control-label">Units</span>
+    <div class="toggle-group">
+      <button class="toggle-btn active">$/GJ</button>
+      <button class="toggle-btn">Native</button>
+    </div>
+  </div>
+  <div class="control-group">
+    <span class="control-label">Period</span>
+    <div class="toggle-group">
+      <button class="toggle-btn">Spot</button>
+      <button class="toggle-btn active">30 days</button>
+      <button class="toggle-btn">12 months</button>
+    </div>
+  </div>
+  <span class="control-note">Emissions &amp; energy factors per <a href="https://www.dcceew.gov.au/climate-change/publications/national-greenhouse-accounts-factors" target="_blank">NGA Factors ↗</a></span>
+</div>
+
+<!-- PRICE TILES -->
+<section class="tiles-section">
+  <div class="tiles-grid">
+    <div class="tile">
+      <div class="tile-fuel">Electricity</div>
+      <div class="tile-price">$26<span>.20</span></div>
+      <div class="tile-meta"><span class="tile-change up">▲ 4.2%</span><span class="tile-unit">$/GJ</span></div>
+    </div>
+    <div class="tile">
+      <div class="tile-fuel">Natural Gas</div>
+      <div class="tile-price">$13<span>.45</span></div>
+      <div class="tile-meta"><span class="tile-change down">▼ 1.8%</span><span class="tile-unit">$/GJ</span></div>
+    </div>
+    <div class="tile">
+      <div class="tile-fuel">Diesel</div>
+      <div class="tile-price">$48<span>.60</span></div>
+      <div class="tile-meta"><span class="tile-change up">▲ 2.1%</span><span class="tile-unit">$/GJ</span></div>
+    </div>
+    <div class="tile">
+      <div class="tile-fuel">LPG</div>
+      <div class="tile-price">$41<span>.80</span></div>
+      <div class="tile-meta"><span class="tile-change up">▲ 0.9%</span><span class="tile-unit">$/GJ</span></div>
+    </div>
+    <div class="tile">
+      <div class="tile-fuel">Coal (thermal)</div>
+      <div class="tile-price">$7<span>.30</span></div>
+      <div class="tile-meta"><span class="tile-change down">▼ 0.4%</span><span class="tile-unit">$/GJ</span></div>
+    </div>
+    <div class="tile">
+      <div class="tile-fuel">Carbon (ACCU)</div>
+      <div class="tile-price">$37<span>.25</span></div>
+      <div class="tile-meta"><span class="tile-change down">▼ 0.5%</span><span class="tile-unit">$/t CO₂-e</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DATA TABLES -->
+<section class="tables-section">
+
+  <!-- Electricity -->
+  <div class="table-block">
+    <div class="table-head">
+      <h2 class="table-title">Electricity</h2>
+      <span class="table-badge">NEM · by region</span>
+    </div>
+    <p class="table-sub">Wholesale spot prices by National Electricity Market region, converted to $/GJ (1 MWh = 3.6 GJ).</p>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead>
+          <tr><th>Region</th><th>$/MWh</th><th>$/GJ</th><th>30-day chg</th><th>12-mth avg</th><th>Emissions (kg CO₂-e/GJ)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>New South Wales <span class="cell-region">NSW1</span></td><td>94.20</td><td class="gj">26.17</td><td class="chg up">▲ 4.2%</td><td>88.40</td><td>183</td></tr>
+          <tr><td>Victoria <span class="cell-region">VIC1</span></td><td>82.50</td><td class="gj">22.92</td><td class="chg down">▼ 2.0%</td><td>79.10</td><td>222</td></tr>
+          <tr><td>Queensland <span class="cell-region">QLD1</span></td><td>108.75</td><td class="gj">30.21</td><td class="chg up">▲ 6.1%</td><td>95.30</td><td>197</td></tr>
+          <tr><td>South Australia <span class="cell-region">SA1</span></td><td>77.30</td><td class="gj">21.47</td><td class="chg down">▼ 3.4%</td><td>72.80</td><td>92</td></tr>
+          <tr><td>Tasmania <span class="cell-region">TAS1</span></td><td>68.90</td><td class="gj">19.14</td><td class="chg down">▼ 1.1%</td><td>66.20</td><td>21</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Natural Gas -->
+  <div class="table-block">
+    <div class="table-head">
+      <h2 class="table-title">Natural Gas</h2>
+      <span class="table-badge">STTM · by hub</span>
+    </div>
+    <p class="table-sub">Short Term Trading Market hub prices. Gas is already priced in $/GJ; combustion emissions ≈ 51 kg CO₂-e/GJ.</p>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead>
+          <tr><th>Hub</th><th>$/GJ</th><th>30-day chg</th><th>12-mth avg</th><th>12-mth high</th><th>12-mth low</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Sydney</td><td class="gj">13.45</td><td class="chg down">▼ 1.8%</td><td>13.90</td><td>18.20</td><td>10.40</td></tr>
+          <tr><td>Adelaide</td><td class="gj">14.10</td><td class="chg up">▲ 0.6%</td><td>14.35</td><td>19.05</td><td>11.10</td></tr>
+          <tr><td>Brisbane</td><td class="gj">12.80</td><td class="chg down">▼ 2.3%</td><td>13.20</td><td>17.40</td><td>9.90</td></tr>
+          <tr><td>Victoria <span class="cell-region">DWGM</span></td><td class="gj">13.05</td><td class="chg down">▼ 1.2%</td><td>13.55</td><td>17.80</td><td>10.10</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Liquid Fuels -->
+  <div class="table-block">
+    <div class="table-head">
+      <h2 class="table-title">Diesel &amp; LPG</h2>
+      <span class="table-badge">Terminal gate · by city</span>
+    </div>
+    <p class="table-sub">Terminal gate prices converted to $/GJ. Diesel ≈ 38.6 MJ/L, LPG ≈ 25.7 MJ/L (NGA energy content factors).</p>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead>
+          <tr><th>City</th><th>Diesel ¢/L</th><th>Diesel $/GJ</th><th>LPG ¢/L</th><th>LPG $/GJ</th><th>30-day chg</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Sydney</td><td>187.5</td><td class="gj">48.60</td><td>107.4</td><td class="gj">41.80</td><td class="chg up">▲ 2.1%</td></tr>
+          <tr><td>Melbourne</td><td>184.2</td><td class="gj">47.74</td><td>105.1</td><td class="gj">40.90</td><td class="chg up">▲ 1.4%</td></tr>
+          <tr><td>Brisbane</td><td>189.8</td><td class="gj">49.20</td><td>109.6</td><td class="gj">42.65</td><td class="chg up">▲ 2.8%</td></tr>
+          <tr><td>Perth</td><td>182.6</td><td class="gj">47.33</td><td>103.8</td><td class="gj">40.40</td><td class="chg down">▼ 0.6%</td></tr>
+          <tr><td>Adelaide</td><td>186.1</td><td class="gj">48.23</td><td>106.7</td><td class="gj">41.52</td><td class="chg up">▲ 1.9%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Coal & Carbon -->
+  <div class="table-block">
+    <div class="table-head">
+      <h2 class="table-title">Coal &amp; Carbon</h2>
+      <span class="table-badge">Benchmark</span>
+    </div>
+    <p class="table-sub">Thermal coal (Newcastle benchmark) converted to $/GJ at ≈ 27 GJ/tonne. ACCU = Australian Carbon Credit Unit spot.</p>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead>
+          <tr><th>Commodity</th><th>Native price</th><th>$/GJ</th><th>30-day chg</th><th>12-mth avg</th><th>Emissions (kg CO₂-e/GJ)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Thermal coal <span class="cell-region">Newcastle</span></td><td>$197/t</td><td class="gj">7.30</td><td class="chg down">▼ 0.4%</td><td>8.05</td><td>90</td></tr>
+          <tr><td>Carbon <span class="cell-region">ACCU</span></td><td>$37.25/t</td><td class="gj">–</td><td class="chg down">▼ 0.5%</td><td>35.80</td><td>–</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <h2>See how your prices <span>compare</span></h2>
+  <p>Enter your current rates into our free comparison tool, or request a custom report benchmarking your costs against the market.</p>
+  <a href="/tools" class="cta-strip-btn">Try the fuel comparator →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <div class="footer-logo">
+      <div class="footer-badge">
+        <svg viewBox="0 0 120 120" width="100%" height="100%" style="display:block;">
+          <rect x="24" y="48" width="12" height="37" rx="2.5" fill="#2E6DA4"/>
+          <rect x="39" y="24" width="12" height="61" rx="2.5" fill="#34C77B"/>
+          <rect x="54" y="38" width="12" height="47" rx="2.5" fill="#3B9EFF"/>
+          <rect x="69" y="60" width="12" height="25" rx="2.5" fill="#2E6DA4"/>
+          <rect x="84" y="44" width="12" height="41" rx="2.5" fill="#3B9EFF"/>
+          <rect x="18" y="88" width="84" height="7" rx="3.5" fill="#3B9EFF"/>
+        </svg>
+      </div>
+      <span class="footer-wordmark"><span class="wm-name">Energy<span>Desk</span></span><span class="wm-au">Australia</span></span>
+    </div>
+    <p class="footer-tagline">Independent energy, fuel and carbon intelligence, helping Australian businesses cut costs, reduce emissions and navigate policy.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Markets</h4>
+    <ul>
+      <li><a href="/markets">Electricity</a></li>
+      <li><a href="/markets">Gas & LPG</a></li>
+      <li><a href="/markets">Diesel & Coal</a></li>
+      <li><a href="/markets">Carbon</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Insights</h4>
+    <ul>
+      <li><a href="/insights">Latest Articles</a></li>
+      <li><a href="/insights">White Papers</a></li>
+      <li><a href="/insights">Newsletter</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Tools & Services</h4>
+    <ul>
+      <li><a href="/tools">Calculators</a></li>
+      <li><a href="/services">Custom Reports</a></li>
+      <li><a href="/services">Training</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <p>© 2026 EnergyDesk Australia · energydesk.com.au</p>
+  <p>Privacy Policy · Terms of Use</p>
+</div>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.hamburger').classList.toggle('active');
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  document.querySelectorAll('.mobile-menu a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.querySelector('.hamburger').classList.remove('active');
+      document.getElementById('mobileMenu').classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>
